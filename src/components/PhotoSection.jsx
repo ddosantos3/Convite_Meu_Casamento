@@ -14,7 +14,7 @@ export function PhotoSection({ data }) {
         </Reveal>
         <div className="photo-grid">
           {data.items.map((photo, index) => (
-            <PhotoCard photo={photo} index={index} key={photo.src} />
+            <PhotoCard photo={photo} index={index} key={photo.image.src} />
           ))}
         </div>
       </div>

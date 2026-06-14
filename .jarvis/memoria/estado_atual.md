@@ -2,52 +2,51 @@
 
 ## Situação
 
-Identidade visual final do convite web de casamento de Douglas e Regiane implementada.
+Convite web otimizado para carregamento e navegação mobile.
 
 ## Demanda mais recente
 
-Usuário solicitou um pente fino de alinhamento e ordenação a partir de screenshots, preservando todo o funcionamento existente.
+Usuário relatou lentidão e pediu revisão das configurações da Vercel e dos
+ajustes possíveis via código.
 
 ## Classificação
 
-- Tipo: evolução visual e narrativa de landing page / convite web
-- Público: pessoas próximas, recebendo o link pelo WhatsApp
-- Prioridade absoluta: experiência mobile
+- Tipo: performance frontend e configuração de deploy
+- Prioridade: experiência mobile via link do WhatsApp
 - Domínio principal: frontend
-- Agentes considerados: Jarvis, frontend_master, qa_master e seguranca_master
+- Agentes considerados: Jarvis, frontend_master, qa_master e devops_cloud_master
 
-## Estado técnico
+## Implementação
 
-- `prompt4.md` atualizado e incorporado como referência da identidade visual final.
-- Cormorant Garamond permanece nos títulos e Manrope nos textos.
-- Background alterna grafite quente, carvão e pontos champagne/cobre.
-- Camadas atmosféricas usam grain, light leaks, partículas leves, escala e rotação lentas com Framer Motion.
-- Ornamentos reutilizáveis combinam linhas finas, folhagens e brilho discreto.
-- Fotos do Hero, mensagem, cerimônia e encerramento receberam tratamento mais luminoso.
-- Cards usam vidro em camadas, borda champagne e glow seletivo.
-- Ícones temáticos representam amor, família, fé, localização e celebração.
-- Hero organiza monograma, data, nomes e mensagem em uma coluna central previsível.
-- Marcos da história e cards de convite e locais compartilham linhas-base e alturas consistentes.
-- Fotos preservam a composição editorial sem sobreposição ou corte de legendas no desktop.
-- Cabeçalho de locais está alinhado à mesma margem da grade de cards.
-- Mensagem especial e cerimônia funcionam como cenas fotográficas em tela cheia.
-- História usa data em grande escala, blocos editoriais e marcos assimétricos.
-- Fotos formam uma composição orgânica sobreposta no desktop e alternada no mobile.
-- Convite, timeline e locais preservam clareza funcional com ritmos visuais distintos.
-- Hero possui zoom cinematográfico lento e timeline acende os pontos em sequência.
-- Fotos reais servidas como WebP de aproximadamente 100 KB cada.
-- PNGs originais preservados em `assets/source-images/`.
-- Build preparado para Vercel e abaixo de 1 MB.
-- Os três botões de localização abrem os locais corretos no Google Maps em nova aba.
+- React, Vite, TailwindCSS e Lucide Icons mantidos.
+- Framer Motion removido do runtime.
+- Reveals usam IntersectionObserver e CSS.
+- Parallax por scroll e animações contínuas foram removidos.
+- Atmosfera é estática e não usa mais camadas fixas no scroll.
+- `backdrop-filter` e halos animados são desativados no mobile.
+- Grain SVG foi substituído por WebP de aproximadamente 2,5 KB.
+- Fotos usam `srcset` com WebP de 900 px no mobile e 1200 px no desktop.
+- Fontes não utilizadas foram removidas do bundle.
+- Vercel usa `npm ci`, saída `dist`, rewrite SPA e cache para `/images/*`.
 
-## Validação executada
+## Resultado medido
+
+- JavaScript: 340 KB para 214 KB.
+- JavaScript gzip: 104 KB para 68 KB.
+- Transferência mobile: 527 KB para 344 KB.
+- Script durante scroll: 1.038 ms para 83 ms.
+- Recálculo de estilo: 1.219 ms para 66 ms.
+- Quadros acima de 34 ms: 30 para 0.
+- Percentil 95 dos frames: 33,4 ms para 16,7 ms.
+
+## Validação
 
 - `npm run optimize:images`: aprovado.
 - `npm run build`: aprovado.
-- `npm audit`: sem vulnerabilidades.
-- `npm run test:e2e`: 2 testes aprovados em mobile `390x844` e desktop `1440x1000`, incluindo verificações geométricas de ordem, alinhamento, alturas e ausência de sobreposição.
-- Revisão visual realizada por screenshots Playwright.
+- `npm audit`: zero vulnerabilidades.
+- `npm run test:e2e`: dois testes aprovados.
+- Screenshots mobile e desktop revisadas.
 
-## Próximo passo recomendado
+## Próximo passo
 
-Publicar a V4 na Vercel e conferir o movimento e os links em celulares reais antes do envio pelo WhatsApp.
+Publicar na Vercel, medir a URL pública e conferir headers/cache em celular real.

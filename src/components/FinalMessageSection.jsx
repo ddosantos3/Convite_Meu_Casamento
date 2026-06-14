@@ -1,22 +1,18 @@
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { InvitationOrnament } from "./InvitationOrnament.jsx";
 import { Reveal } from "./Reveal.jsx";
 
 export function FinalMessageSection({ data, couple }) {
-  const shouldReduceMotion = useReducedMotion();
-  const { scrollYProgress } = useScroll();
-  const imageY = useTransform(scrollYProgress, [0.68, 1], [shouldReduceMotion ? 0 : -20, shouldReduceMotion ? 0 : 24]);
-
   return (
     <section id={data.id} className="final-section">
-      <motion.img
+      <img
         className="final-photo"
-        src={data.image}
+        src={data.image.src}
+        srcSet={data.image.srcSet}
+        sizes="100vw"
         alt=""
         aria-hidden="true"
         loading="lazy"
         decoding="async"
-        style={{ y: imageY, scale: 1.12 }}
       />
       <div className="final-photo-overlay" aria-hidden="true" />
       <Reveal>

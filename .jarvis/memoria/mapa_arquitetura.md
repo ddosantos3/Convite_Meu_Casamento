@@ -11,7 +11,8 @@ Aplicação frontend estática com React e Vite, preparada para Vercel.
 ├─ assets/source-images/       # PNGs originais
 ├─ public/images/              # WebP servidos pelo site
 ├─ scripts/
-│  └─ optimize-images.mjs
+│  ├─ optimize-images.mjs
+│  └─ profile-runtime.mjs
 ├─ tests/
 │  └─ invitation.spec.js
 ├─ src/
@@ -43,7 +44,8 @@ Aplicação frontend estática com React e Vite, preparada para Vercel.
 
 ## Pipeline de mídia
 
-`assets/source-images/*.png` → `npm run optimize:images` → `public/images/*.webp`.
+`assets/source-images/*.png` → `npm run optimize:images` → WebP de 900 px e
+1200 px em `public/images/`.
 
 ## Superfície de risco
 

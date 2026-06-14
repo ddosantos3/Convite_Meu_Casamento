@@ -7,12 +7,17 @@ const mapUrls = {
     "https://www.google.com/maps/place/Est%C3%A2ncias+Ip%C3%AAs+e+Pinhais/@-22.1065308,-49.9039638,847m/data=!3m1!1e3!4m6!3m5!1s0x94bfd32457d78efd:0x641a3c66d83ff1fd!8m2!3d-22.1054713!4d-49.9067162!16s%2Fg%2F11l9fhzrsq?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D",
 };
 
+const image = (name) => ({
+  src: `/images/${name}.webp`,
+  srcSet: `/images/${name}-900.webp 900w, /images/${name}.webp 1200w`,
+});
+
 export const weddingData = {
   couple: "Douglas & Regiane",
   date: "12/09",
   storyStart: "12/05/2020",
   hero: {
-    image: "/images/2.webp",
+    image: image("2"),
     message:
       "Uma cerimônia simples, feita de todo coração, para pessoas que fazem parte da nossa história.",
   },
@@ -20,7 +25,7 @@ export const weddingData = {
     id: "para-alguem-especial",
     eyebrow: "Você faz parte disso",
     title: "Para alguém especial",
-    image: "/images/1.webp",
+    image: image("1"),
     paragraphs: [
       "Este convite chegou até você porque sua presença tem valor em nossa vida.",
       "Nossa cerimônia será simples, íntima e feita de todo coração. Queremos viver esse momento ao lado de pessoas que, de alguma forma, fazem parte da nossa caminhada.",
@@ -61,17 +66,17 @@ export const weddingData = {
     items: [
       {
         // Trocar por outra foto real do casal ou da família, se necessário.
-        src: "/images/1.webp",
+        image: image("1"),
         alt: "Foto 1 de Douglas e Regiane",
       },
       {
         // Trocar por outra foto real do casal ou da família, se necessário.
-        src: "/images/2.webp",
+        image: image("2"),
         alt: "Foto 2 de Douglas e Regiane",
       },
       {
         // Trocar por outra foto real do casal ou da família, se necessário.
-        src: "/images/3.webp",
+        image: image("3"),
         alt: "Foto 3 de Douglas e Regiane",
       },
     ],
@@ -80,7 +85,7 @@ export const weddingData = {
     id: "sobre-a-cerimonia",
     eyebrow: "Sobre a cerimônia",
     title: "Um momento íntimo",
-    image: "/images/3.webp",
+    image: image("3"),
     paragraphs: [
       "Nosso casamento será uma cerimônia íntima, simples e muito especial.",
       "Escolhemos viver esse momento ao lado das pessoas mais próximas, aquelas que de alguma forma fazem parte da nossa caminhada e da nossa história.",
@@ -172,7 +177,7 @@ export const weddingData = {
   finalMessage: {
     id: "mensagem-final",
     title: "Com carinho",
-    image: "/images/3.webp",
+    image: image("3"),
     paragraphs: [
       "Não estamos preparando uma grande festa.",
       "Estamos preparando um momento verdadeiro.",

@@ -1,13 +1,20 @@
 # Resumo Executivo
 
-O projeto contém a identidade visual final do convite web de Douglas e Regiane, criada a partir da revisão ampliada de `prompt4.md` com o conceito "Uma memória em movimento".
+O projeto contém a identidade visual final do convite web de Douglas e Regiane,
+com foco mobile-first para compartilhamento por WhatsApp.
 
-A experiência combina cenas fotográficas mais luminosas, bases em grafite e carvão, datas monumentais, blocos editoriais assimétricos, colagem orgânica de fotos, ornamentos de folhagem e partículas leves. Hero, fundos, reveals, timeline, cards e links usam motion sutil com respeito a `prefers-reduced-motion`.
+A otimização mais recente preservou as cenas fotográficas e a composição
+editorial, mas removeu parallax, filtros animados, camadas fixas e Framer Motion
+do runtime. Reveals usam IntersectionObserver e CSS.
 
-O refinamento mais recente estabilizou ordem e alinhamento: data abaixo do monograma, cards com topo e base consistentes, fotos sem sobreposição e cabeçalhos conectados às respectivas grades.
+As fotos são servidas em WebP responsivo: variantes de 900 px no mobile e 1200
+px no desktop. Os PNGs originais permanecem em `assets/source-images/`.
 
-As três fotos são servidas em WebP com cerca de 100 KB cada. Os PNGs originais permanecem em `assets/source-images/` e podem ser reprocessados com `npm run optimize:images`.
+O bundle JavaScript caiu de 340 KB para 214 KB. No perfil mobile, a transferência
+caiu de 527 KB para 344 KB e os quadros acima de 34 ms caíram de 30 para zero.
 
-Não há RSVP, formulário, botão de WhatsApp ou coleta de dados. Os três botões de localização apontam para o Google Maps.
+Não há RSVP, formulário, botão de WhatsApp ou coleta de dados. Os três botões de
+localização apontam para o Google Maps.
 
-Validações de 2026-06-14: build aprovado, audit limpo e Playwright aprovado em mobile e desktop.
+Validações de 2026-06-14: build aprovado, audit limpo, Playwright aprovado em
+mobile e desktop e screenshots revisadas.

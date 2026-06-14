@@ -2,6 +2,19 @@
 
 ## 2026-06-14
 
+- Investigada lentidão de carregamento e navegação com perfil mobile reproduzível.
+- Removidos Framer Motion, parallax por scroll e animações contínuas do runtime.
+- Substituídos reveals por IntersectionObserver e transições CSS.
+- Convertida textura SVG `feTurbulence` em WebP leve.
+- Removidas camadas atmosféricas fixas e filtros pesados de imagens em tela cheia.
+- Desativados `backdrop-filter` e halos animados no mobile.
+- Criadas variantes WebP de 900 px e mantidas versões de 1200 px via `srcset`.
+- Reduzido bundle JavaScript de 340 KB para 214 KB.
+- Reduzida transferência mobile medida de 527 KB para 344 KB.
+- Reduzidos quadros lentos de 30 para 0 no perfil local.
+- Atualizado `vercel.json` para `npm ci` e cache de imagens com revalidação.
+- Adicionado `npm run profile:runtime`.
+- Executados build, audit, testes Playwright e revisão visual após a otimização.
 - Corrigida a ordem do Hero para manter a data abaixo de `D · R`.
 - Uniformizadas linhas-base e alturas dos marcos da história e cards de eventos e locais.
 - Removidos offsets verticais que deixavam cards visualmente desalinhados.

@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export function Reveal({
   children,
@@ -8,31 +8,51 @@ export function Reveal({
   distance = 28,
   scale = 1,
 }) {
-  const shouldReduceMotion = useReducedMotion();
+  const elementRef = useRef(null);
   const offset = {
-    up: { y: distance },
-    down: { y: -distance },
-    left: { x: distance },
-    right: { x: -distance },
-  }[direction] ?? { y: distance };
+    up: { x: 0, y: distance },
+    down: { x: 0, y: -distance },
+    left: { x: distance, y: 0 },
+    right: { x: -distance, y: 0 },
+  }[direction] ?? { x: 0, y: distance };
+
+  useEffect(() => {
+    const element = elementRef.current;
+    if (!element) return undefined;
+
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      !("IntersectionObserver" in window)
+    ) {
+      element.classList.add("is-visible");
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        element.classList.add("is-visible");
+        observer.disconnect();
+      },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <motion.div
-      className={className}
-      initial={
-        shouldReduceMotion
-          ? false
-          : { opacity: 0, ...offset, scale, filter: "blur(4px)" }
-      }
-      whileInView={
-        shouldReduceMotion
-          ? undefined
-          : { opacity: 1, x: 0, y: 0, scale: 1, filter: "blur(0px)" }
-      }
-      viewport={{ once: true, amount: 0.24 }}
-      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay }}
+    <div
+      className={`reveal ${className}`}
+      ref={elementRef}
+      style={{
+        "--reveal-delay": `${delay}s`,
+        "--reveal-scale": scale,
+        "--reveal-x": `${offset.x}px`,
+        "--reveal-y": `${offset.y}px`,
+      }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

@@ -1,4 +1,7 @@
 # Pendências
 
-- Atualizar o projeto na Vercel e publicar a V4.
-- Conferir a URL final em celulares reais antes de enviar pelo WhatsApp.
+- Publicar a versão otimizada na Vercel.
+- Confirmar a URL pública final.
+- Medir a URL pública com `npm run profile:runtime -- <url>`.
+- Conferir os headers de compressão e cache na Vercel.
+- Testar a navegação em celular real usando conexão móvel.

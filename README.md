@@ -1,136 +1,95 @@
 # Convite Douglas & Regiane
 
-Versão conceitual final do convite web de casamento para Douglas e Regiane.
-
-O projeto foi criado para ser enviado por WhatsApp e aberto principalmente no celular. A experiência "Uma memória em movimento" combina cenas fotográficas, composição editorial assimétrica, bases em grafite e carvão, ornamentos de folhagem, partículas sutis, glassmorphism, glow champagne e movimento suave.
+Convite web de casamento criado para compartilhamento por WhatsApp, com
+experiência mobile-first, cenas fotográficas e composição editorial.
 
 ## Stack
 
 - React
 - Vite
 - TailwindCSS
-- Framer Motion
 - Lucide Icons
-- Cormorant Garamond
-- Manrope
+- Cormorant Garamond e Manrope via Fontsource
+- Motion nativo com CSS e IntersectionObserver
 - Playwright
 
-## Como Rodar
+## Comandos
 
 Requisito: Node.js `>=22.12.0`.
 
 ```bash
 npm install
 npm run dev
-```
-
-Build de produção:
-
-```bash
 npm run build
+npm run test:e2e
 ```
 
-Otimizar novamente as imagens após trocar os PNGs originais:
+Ao trocar os PNGs em `assets/source-images/`:
 
 ```bash
 npm run optimize:images
 ```
 
-Validação responsiva:
+Para medir uma prévia local ou a URL publicada:
 
 ```bash
-npm run test:e2e
+npm run profile:runtime -- https://seu-dominio.vercel.app
 ```
 
-Prévia do build:
+## Vercel
 
-```bash
-npm run preview
-```
-
-## Deploy na Vercel
-
-O projeto já está preparado para Vercel com `vercel.json`.
-
-Configuração esperada:
+O projeto usa [vercel.json](./vercel.json) com:
 
 - Framework: Vite
-- Install command: `npm install`
+- Install command: `npm ci`
 - Build command: `npm run build`
 - Output directory: `dist`
-- Node.js: `>=22.12.0`
+- Rewrite SPA para `index.html`
+- Cache de navegador para `/images/*`
 
-Ao importar o repositório na Vercel, essas configurações devem ser detectadas automaticamente.
+Assets com hash gerados pelo Vite usam o cache padrão da Vercel.
 
 ## Estrutura
 
-```text
-src/
-├─ App.jsx
-├─ data/
-│  └─ weddingData.js
-├─ components/
-│  ├─ HeroSection.jsx
-│  ├─ MessageSection.jsx
-│  ├─ StorySection.jsx
-│  ├─ PhotoSection.jsx
-│  ├─ CeremonySection.jsx
-│  ├─ InvitationSection.jsx
-│  ├─ TimelineSection.jsx
-│  ├─ LocationSection.jsx
-│  ├─ FinalMessageSection.jsx
-│  ├─ AtmosphereLayer.jsx
-│  ├─ InvitationOrnament.jsx
-│  ├─ GlassCard.jsx
-│  ├─ InvitationCard.jsx
-│  ├─ LocationCard.jsx
-│  ├─ PhotoCard.jsx
-│  ├─ TimelineItem.jsx
-│  ├─ Reveal.jsx
-│  └─ SectionShell.jsx
-└─ styles/
-   └─ index.css
-```
+- `src/data/weddingData.js`: textos, locais, links e caminhos das fotos.
+- `src/components/`: seções e componentes do convite.
+- `src/styles/index.css`: identidade visual e responsividade.
+- `assets/source-images/`: PNGs originais.
+- `public/images/`: WebP de 900 px e 1200 px.
+- `scripts/optimize-images.mjs`: pipeline das imagens.
+- `scripts/profile-runtime.mjs`: perfil de carregamento e scroll.
+- `tests/invitation.spec.js`: validação mobile e desktop.
 
-## Onde Editar Dados
+## Performance
 
-Os dados principais ficam em `src/data/weddingData.js`.
+Comparação local em viewport `390x844`:
 
-Ali é possível trocar:
+- JavaScript: 340 KB para 214 KB, ou 104 KB para 68 KB com gzip.
+- Transferência no percurso mobile: 527 KB para 344 KB.
+- Trabalho de script no scroll: 1.038 ms para 83 ms.
+- Quadros acima de 34 ms: 30 para 0.
+- Percentil 95 dos frames: 33,4 ms para 16,7 ms.
 
-- nomes e data;
-- textos das seções;
-- caminhos das fotos;
-- horários;
-- locais;
-- links do Google Maps.
-
-As fotos usadas pelo layout ficam em `public/images/`:
-
-- `/images/1.webp`
-- `/images/2.webp`
-- `/images/3.webp`
-
-Os PNGs originais ficam em `assets/source-images/`. O script `npm run optimize:images` gera novamente os WebP públicos.
-
-Os três botões de localização já apontam para o Google Maps e abrem em uma nova aba.
+No mobile, o navegador seleciona fotos WebP de 900 px, entre 57 e 67 KB.
+No desktop, pode selecionar as variantes de 1200 px.
 
 ## Validação
 
 Executado em 2026-06-14:
 
-- `npm run build`
-- `npm audit`
-- `npm run test:e2e`
+- Build Vite aprovado.
+- `npm audit`: zero vulnerabilidades.
+- Playwright: dois testes aprovados em `390x844` e `1440x1000`.
+- Revisão visual por screenshots completas.
 
-Resultado: build concluído, auditoria sem vulnerabilidades e testes aprovados em `390x844` e `1440x1000`, incluindo ordem do Hero, alinhamento dos cards e ausência de sobreposição entre fotos.
+## Publicação
 
-A revisão visual também foi feita por screenshots completas do Playwright nos dois formatos.
+Depois do deploy, verificar:
 
-## Observação de Performance
+```bash
+curl -I https://seu-dominio.vercel.app/
+curl -I https://seu-dominio.vercel.app/images/2-900.webp
+```
 
-Os PNGs originais têm cerca de 2.1 MB cada. As versões WebP servidas pelo site têm aproximadamente 100 KB cada, e o build completo fica abaixo de 1 MB.
-
-## Pendências
-
-- Conectar ou atualizar o repositório na Vercel e publicar.
+Conferir `content-encoding`, `cache-control`, `x-vercel-cache` e `age`, além de
+testar a URL em um celular real.

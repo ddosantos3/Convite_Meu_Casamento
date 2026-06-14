@@ -6,13 +6,13 @@ Jarvis coordena qualquer demanda neste projeto, mantendo memória operacional e 
 
 ## Estado atual
 
-O projeto possui a identidade visual final do convite web de casamento de Douglas e Regiane, com cenas fotográficas mais luminosas, composição editorial assimétrica, ornamentos delicados, partículas sutis, fotos WebP e motion suave.
+O projeto possui a identidade visual final do convite web de casamento de Douglas e Regiane, com cenas fotográficas, composição editorial assimétrica, ornamentos delicados, fotos WebP responsivas e motion nativo leve.
 
 ## Classificação da entrega
 
 - Tipo: landing page / convite web
 - Prioridade: mobile-first para envio por WhatsApp
-- Stack: React, Vite, TailwindCSS, Framer Motion e Lucide Icons
+- Stack: React, Vite, TailwindCSS, Lucide Icons e motion com CSS/IntersectionObserver
 - Sem backend, formulário, RSVP, botão de WhatsApp ou coleta de dados
 
 ## Fluxo local
@@ -40,6 +40,6 @@ O projeto possui a identidade visual final do convite web de casamento de Dougla
 - Não criar RSVP, confirmação de presença, formulário, botão de WhatsApp ou campo de quantidade de pessoas.
 - Priorizar leitura confortável em telas pequenas.
 - Preservar tom humano, simples, íntimo e emocional.
-- Manter brilho e animações discretos.
+- Manter brilho e animações discretos, sem listeners contínuos de scroll no mobile.
 - Manter os links do Google Maps centralizados em `src/data/weddingData.js`.
-- Manter os PNGs originais em `assets/source-images/` e servir os WebP gerados em `public/images/`.
+- Manter os PNGs originais em `assets/source-images/` e servir WebP de 900 px e 1200 px em `public/images/`.
