@@ -1,3 +1,12 @@
+const mapUrls = {
+  civil:
+    "https://www.google.com/maps/place/Oficial+de+Registro+Civil+das+Pessoas+Naturais+e+de+Interdi%C3%A7%C3%B5es+e+Tutelas+-+Nome+de+Fantasia:+Parra+Registros+e+Servi%C3%A7os/@-22.2199747,-49.9485748,17z/data=!3m1!4b1!4m6!3m5!1s0x94bfd737dfd7d88b:0x28c81d3148d3dd2!8m2!3d-22.2199747!4d-49.9459999!16s%2Fg%2F11b6gkpj1b?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D",
+  religious:
+    "https://www.google.com/maps?sca_esv=19cdb9ead32b966e&rlz=1C1SQJL_pt-BRBR1203BR1203&output=search&q=sagrado+cora%C3%A7%C3%A3o+de+jesus+igreja+marilia&source=lnms&fbs=ADc_l-acAb_3MMOAUx0zmbUpgBqRiigBgL2I_pgQa-94zvB054Dys3s2x_Qm_GJcU2DlSXjGaRWzFR_7WR9-t6Fsc53GhxhYXsXrBYHNKryQwb7UeekEx_ocTbopQoLxwKIBpAogHU5k4Hwqrf8VXUIm8U9PyCFNlK7vj97jTyecqw-SYiYZJ2K_vz6ci8gEhcXDm9yT6NHdaU4U2onh2LCOtxj0DSX-wg&entry=mc&ved=1t:200715&ictx=111",
+  celebration:
+    "https://www.google.com/maps/place/Est%C3%A2ncias+Ip%C3%AAs+e+Pinhais/@-22.1065308,-49.9039638,847m/data=!3m1!1e3!4m6!3m5!1s0x94bfd32457d78efd:0x641a3c66d83ff1fd!8m2!3d-22.1054713!4d-49.9067162!16s%2Fg%2F11l9fhzrsq?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D",
+};
+
 export const weddingData = {
   couple: "Douglas & Regiane",
   date: "12/09",
@@ -90,21 +99,21 @@ export const weddingData = {
     label: "Casamento Civil",
     time: "09:00",
     location: "Cartório Parra",
-    mapUrl: "#", // Substituir o href pelo link correto do Google Maps.
+    mapUrl: mapUrls.civil,
   },
   religious: {
     title: "Casamento Religioso",
     label: "Casamento Religioso",
     time: "11:00",
     location: "Paróquia Sagrado Coração de Jesus",
-    mapUrl: "#", // Substituir o href pelo link correto do Google Maps.
+    mapUrl: mapUrls.religious,
   },
   celebration: {
     title: "Comemoração",
     label: "Comemoração",
     time: "Após o casamento religioso",
     location: "Churrasco na chácara do Vô Luizão",
-    mapUrl: "#", // Substituir o href pelo link correto do Google Maps.
+    mapUrl: mapUrls.celebration,
     description:
       "Comemoração após o casamento religioso, com churrasco, carinho e pessoas especiais por perto.",
   },
@@ -140,21 +149,21 @@ export const weddingData = {
         name: "Cartório Parra",
         microcopy: "Onde damos o primeiro passo oficial desse dia.",
         description: "Casamento Civil às 09:00.",
-        mapUrl: "#", // Substituir o href pelo link correto do Google Maps.
+        mapUrl: mapUrls.civil,
       },
       {
         type: "religious",
         name: "Paróquia Sagrado Coração de Jesus",
         microcopy: "Onde celebraremos nossa união diante de Deus.",
         description: "Casamento Religioso às 11:00.",
-        mapUrl: "#", // Substituir o href pelo link correto do Google Maps.
+        mapUrl: mapUrls.religious,
       },
       {
         type: "celebration",
         name: "Chácara do Vô Luizão",
         microcopy: "Depois da cerimônia, seguimos para comemorar de um jeito simples, leve e nosso.",
         description: "Comemoração após o casamento religioso.",
-        mapUrl: "#", // Substituir o href pelo link correto do Google Maps.
+        mapUrl: mapUrls.celebration,
       },
     ],
   },

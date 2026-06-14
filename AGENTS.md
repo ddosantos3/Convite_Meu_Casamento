@@ -41,5 +41,5 @@ O projeto possui uma terceira versão conceitual do convite web de casamento de 
 - Priorizar leitura confortável em telas pequenas.
 - Preservar tom humano, simples, íntimo e emocional.
 - Manter brilho e animações discretos.
-- Trocar os links `#` dos mapas antes de publicar.
+- Manter os links do Google Maps centralizados em `src/data/weddingData.js`.
 - Manter os PNGs originais em `assets/source-images/` e servir os WebP gerados em `public/images/`.

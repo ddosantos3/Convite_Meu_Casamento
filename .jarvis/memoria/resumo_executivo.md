@@ -6,6 +6,6 @@ A experiência deixou de ser uma sequência rígida de seções e passou a usar 
 
 As três fotos são servidas em WebP com cerca de 100 KB cada. Os PNGs originais permanecem em `assets/source-images/` e podem ser reprocessados com `npm run optimize:images`.
 
-Não há RSVP, formulário, botão de WhatsApp ou coleta de dados. Os mapas continuam como placeholders `#`.
+Não há RSVP, formulário, botão de WhatsApp ou coleta de dados. Os três botões de localização apontam para o Google Maps.
 
 Validações de 2026-06-14: build aprovado, audit limpo e Playwright aprovado em mobile e desktop.

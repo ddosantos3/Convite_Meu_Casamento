@@ -2,7 +2,6 @@
 
 ## Riscos atuais
 
-- Os botões de localização ainda usam `href="#"`.
 - A validação automatizada cobre Chrome em mobile e desktop, mas não substitui a conferência final em aparelhos reais.
 - A URL pública final da Vercel ainda precisa ser confirmada.
 
@@ -10,7 +9,7 @@
 
 - O site não coleta dados pessoais.
 - Não há formulário, RSVP, confirmação de presença, botão de WhatsApp ou integração externa ativa.
-- Links externos de mapa devem ser conferidos antes da publicação.
+- Links externos de mapa usam nova aba com `noopener noreferrer`.
 
 ## Mitigações
 

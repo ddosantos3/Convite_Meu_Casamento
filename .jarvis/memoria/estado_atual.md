@@ -6,7 +6,7 @@ Terceira versão conceitual do convite web de casamento de Douglas e Regiane imp
 
 ## Demanda mais recente
 
-Usuário solicitou trazer `prompt3.md` do repositório e aplicar todas as atualizações descritas.
+Usuário forneceu os links do Google Maps para o cartório, a paróquia e a chácara, solicitando correção dos botões e commit no repositório.
 
 ## Classificação
 
@@ -25,7 +25,7 @@ Usuário solicitou trazer `prompt3.md` do repositório e aplicar todas as atuali
 - Fotos reais servidas como WebP de aproximadamente 100 KB cada.
 - PNGs originais preservados em `assets/source-images/`.
 - Build preparado para Vercel e abaixo de 1 MB.
-- Links de mapas ainda estão como `#`.
+- Os três botões de localização abrem os locais corretos no Google Maps em nova aba.
 
 ## Validação executada
 
@@ -37,4 +37,4 @@ Usuário solicitou trazer `prompt3.md` do repositório e aplicar todas as atuali
 
 ## Próximo passo recomendado
 
-Substituir os links dos mapas, publicar na Vercel e conferir o link final em celulares reais antes do envio pelo WhatsApp.
+Publicar a atualização na Vercel e conferir os links em celulares reais antes do envio pelo WhatsApp.

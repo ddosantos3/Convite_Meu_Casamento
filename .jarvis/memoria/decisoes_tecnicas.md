@@ -12,4 +12,6 @@
 - Remover a seção redundante de presença e incorporar o sentimento no fluxo narrativo e no encerramento.
 - Validar responsividade com Playwright em `390x844` e `1440x1000`.
 - Manter Vercel com saída `dist`, rewrite SPA e Node `>=22.12.0`.
+- Centralizar os três links do Google Maps em uma constante compartilhada dentro de `weddingData.js`.
+- Abrir mapas em nova aba com `target="_blank"` e `rel="noopener noreferrer"`.
 - Não implementar backend, RSVP, formulário, botão de WhatsApp ou coleta de dados.

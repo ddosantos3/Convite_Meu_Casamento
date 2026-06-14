@@ -112,7 +112,7 @@ As fotos usadas pelo layout ficam em `public/images/`:
 
 Os PNGs originais ficam em `assets/source-images/`. O script `npm run optimize:images` gera novamente os WebP públicos.
 
-Os links dos mapas estão como `#` por enquanto. Substituir cada `mapUrl` pelo link correto do Google Maps antes de publicar.
+Os três botões de localização já apontam para o Google Maps e abrem em uma nova aba.
 
 ## Validação
 
@@ -130,5 +130,4 @@ Os PNGs originais têm cerca de 2.1 MB cada. As versões WebP servidas pelo site
 
 ## Pendências
 
-- Substituir `mapUrl: "#"` pelos links reais dos locais.
-- Conectar o repositório na Vercel e publicar.
+- Conectar ou atualizar o repositório na Vercel e publicar.

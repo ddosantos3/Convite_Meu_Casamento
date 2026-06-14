@@ -8,6 +8,7 @@
 - Manter brilho, profundidade e motion discretos.
 - Respeitar `prefers-reduced-motion`.
 - Dados editáveis devem permanecer em `src/data/weddingData.js`.
+- Links do Google Maps devem permanecer centralizados e abrir com proteção para links externos.
 - PNGs originais ficam em `assets/source-images/`.
 - WebP públicos ficam em `public/images/`.
 - Toda entrega deve passar por build, audit e testes Playwright.

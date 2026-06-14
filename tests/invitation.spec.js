@@ -30,6 +30,15 @@ test("renders the complete invitation without horizontal overflow", async ({ pag
 
   await expect(page.getByRole("heading", { level: 2, name: "Com carinho" })).toBeVisible();
 
+  const locationLinks = page.getByRole("link", { name: /Ver localização de .* no Google Maps/ });
+  await expect(locationLinks).toHaveCount(3);
+
+  for (let index = 0; index < 3; index += 1) {
+    await expect(locationLinks.nth(index)).toHaveAttribute("href", /^https:\/\/www\.google\.com\/maps/);
+    await expect(locationLinks.nth(index)).toHaveAttribute("target", "_blank");
+    await expect(locationLinks.nth(index)).toHaveAttribute("rel", "noopener noreferrer");
+  }
+
   const imagesLoaded = await page.locator("img").evaluateAll((images) =>
     images.every((image) => image.complete && image.naturalWidth > 0),
   );

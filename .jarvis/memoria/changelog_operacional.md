@@ -2,6 +2,9 @@
 
 ## 2026-06-14
 
+- Adicionados links reais do Google Maps para Cartório Parra, Paróquia Sagrado Coração de Jesus e Chácara do Vô Luizão.
+- Configurados links de localização para abrir em nova aba com `noopener noreferrer`.
+- Ampliado teste Playwright para validar URL, alvo e proteção dos três links externos.
 - Atualizado repositório local por fast-forward e lido `prompt3.md`.
 - Criada V3 conceitual com narrativa visual contínua.
 - Adicionadas fontes self-hosted Cormorant Garamond e Manrope.
