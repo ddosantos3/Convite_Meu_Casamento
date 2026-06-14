@@ -1,25 +1,54 @@
 import { Heart } from "lucide-react";
-import { GlassCard } from "./GlassCard.jsx";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { Reveal } from "./Reveal.jsx";
-import { SectionShell } from "./SectionShell.jsx";
 
 export function MessageSection({ data }) {
+  const sectionRef = useRef(null);
+  const shouldReduceMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const imageY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    shouldReduceMotion ? ["0%", "0%"] : ["-4%", "4%"],
+  );
+
   return (
-    <SectionShell
-      id={data.id}
-      eyebrow={data.eyebrow}
-      title={data.title}
-      className="section-message"
-      narrow
-    >
-      <Reveal>
-        <GlassCard className="message-card">
-          <Heart className="card-icon" size={22} aria-hidden="true" />
-          {data.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </GlassCard>
-      </Reveal>
-    </SectionShell>
+    <section ref={sectionRef} id={data.id} className="memory-scene section-message">
+      <motion.img
+        className="message-scene-photo"
+        src={data.image}
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        style={{ y: imageY, scale: 1.08 }}
+      />
+      <div className="message-scene-overlay" aria-hidden="true" />
+      <div className="section-inner message-scene-inner">
+        <Reveal className="message-scene-heading" direction="right">
+          <span className="section-eyebrow">{data.eyebrow}</span>
+          <h2>{data.title}</h2>
+        </Reveal>
+        <div className="message-editorial-grid">
+          <Reveal direction="right" delay={0.08}>
+            <blockquote>{data.paragraphs[0]}</blockquote>
+          </Reveal>
+          <Reveal direction="left" delay={0.18}>
+            <div className="message-note">
+              <span className="message-note-icon">
+                <Heart className="card-icon" size={21} aria-hidden="true" />
+              </span>
+              {data.paragraphs.slice(1).map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
   );
 }

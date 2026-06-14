@@ -1,8 +1,8 @@
 # Convite Douglas & Regiane
 
-Terceira versão conceitual do convite web de casamento para Douglas e Regiane.
+Quarta versão conceitual do convite web de casamento para Douglas e Regiane.
 
-O projeto foi criado para ser enviado por WhatsApp e aberto principalmente no celular. A experiência combina dark afetivo, fotos reais, tipografia editorial, glassmorphism, glow champagne e movimento suave para contar a história do casal de forma contínua.
+O projeto foi criado para ser enviado por WhatsApp e aberto principalmente no celular. A experiência "Uma memória em movimento" combina cenas fotográficas, composição editorial assimétrica, dark afetivo, glassmorphism, glow champagne e movimento suave para contar a história do casal sem aparência de landing page convencional.
 
 ## Stack
 
@@ -123,6 +123,8 @@ Executado em 2026-06-14:
 - `npm run test:e2e`
 
 Resultado: build concluído, auditoria sem vulnerabilidades e testes aprovados em `390x844` e `1440x1000`.
+
+A revisão visual também foi feita por screenshots completas do Playwright nos dois formatos.
 
 ## Observação de Performance
 

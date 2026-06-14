@@ -106,6 +106,9 @@
 
   .hero-section,
   .section-band,
+  .editorial-section,
+  .memory-scene,
+  .ceremony-scene,
   .final-section {
     position: relative;
     z-index: 1;
@@ -759,7 +762,6 @@
   .location-link:hover {
     border-color: rgba(218, 181, 113, 0.42);
     background: rgba(214, 174, 105, 0.12);
-    transform: translateY(-1px);
   }
 
   .final-section {
@@ -841,6 +843,366 @@
     text-shadow:
       0 0 30px rgba(216, 177, 106, 0.24),
       0 12px 38px rgba(0, 0, 0, 0.36);
+  }
+
+  .memory-scene,
+  .ceremony-scene {
+    display: grid;
+    min-height: 92svh;
+    align-items: center;
+    padding: 6rem 1.25rem;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .message-scene-photo,
+  .ceremony-scene-photo {
+    position: absolute;
+    inset: -8% 0 0;
+    z-index: -4;
+    width: 100%;
+    height: 116%;
+    object-fit: cover;
+    will-change: transform;
+  }
+
+  .message-scene-photo {
+    object-position: center 38%;
+    opacity: 0.48;
+    filter: saturate(0.78) contrast(1.02) brightness(0.62);
+  }
+
+  .message-scene-overlay,
+  .ceremony-scene-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    pointer-events: none;
+  }
+
+  .message-scene-overlay {
+    background:
+      linear-gradient(180deg, #120e0c 0%, rgba(14, 10, 8, 0.35) 20%, rgba(14, 10, 8, 0.58) 74%, #100c0a 100%),
+      linear-gradient(90deg, rgba(9, 7, 6, 0.82), rgba(9, 7, 6, 0.18) 58%, rgba(9, 7, 6, 0.62));
+  }
+
+  .message-scene-inner,
+  .ceremony-scene-inner {
+    width: min(100%, 66rem);
+  }
+
+  .message-scene-heading,
+  .story-editorial-heading,
+  .memories-heading,
+  .ceremony-scene-heading,
+  .invitation-heading {
+    position: relative;
+    z-index: 1;
+  }
+
+  .message-scene-heading {
+    max-width: 30rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .message-scene-heading h2,
+  .story-editorial-heading h2,
+  .memories-heading h2,
+  .ceremony-scene-heading h2,
+  .invitation-heading h2 {
+    margin: 0;
+    color: #fff8eb;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 0.98;
+    text-shadow:
+      0 0 28px rgba(213, 174, 105, 0.17),
+      0 12px 36px rgba(0, 0, 0, 0.34);
+  }
+
+  .message-editorial-grid {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .message-editorial-grid blockquote {
+    max-width: 30rem;
+    margin: 0;
+    color: #fff8eb;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.08;
+    text-wrap: balance;
+    text-shadow: 0 8px 30px rgba(0, 0, 0, 0.42);
+  }
+
+  .message-note {
+    position: relative;
+    display: grid;
+    max-width: 31rem;
+    padding: 1.25rem;
+    gap: 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    background: rgba(20, 15, 12, 0.56);
+    box-shadow:
+      0 24px 70px rgba(0, 0, 0, 0.38),
+      inset 0 1px 0 rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(18px);
+  }
+
+  .message-note-icon,
+  .ceremony-icon {
+    display: inline-grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    place-items: center;
+    border: 1px solid rgba(218, 181, 113, 0.22);
+    border-radius: 999px;
+    background: rgba(214, 174, 105, 0.08);
+    box-shadow: 0 0 28px rgba(212, 175, 112, 0.09);
+  }
+
+  .message-note p,
+  .ceremony-copy p,
+  .story-family-note p,
+  .story-closing p {
+    margin: 0;
+    color: rgba(245, 235, 220, 0.82);
+    font-size: 0.98rem;
+    line-height: 1.82;
+  }
+
+  .editorial-section {
+    padding: 6rem 1.25rem;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .section-story {
+    min-height: 100svh;
+    background:
+      radial-gradient(ellipse at 0% 40%, rgba(215, 177, 108, 0.12), transparent 34rem),
+      linear-gradient(180deg, #100c0a, rgba(57, 38, 28, 0.18), #100c0a);
+  }
+
+  .story-date-ghost {
+    position: absolute;
+    top: 4.5rem;
+    right: -1.5rem;
+    z-index: -1;
+    color: rgba(237, 207, 152, 0.045);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 7rem;
+    font-weight: 600;
+    line-height: 0.8;
+    white-space: nowrap;
+    user-select: none;
+  }
+
+  .story-editorial-heading {
+    max-width: 31rem;
+    margin-bottom: 2.75rem;
+  }
+
+  .story-editorial-grid {
+    display: grid;
+    gap: 1.4rem;
+  }
+
+  .story-copy-main {
+    max-width: 39rem;
+  }
+
+  .story-family-note {
+    position: relative;
+    max-width: 32rem;
+    padding: 1.3rem 1.3rem 1.3rem 1.45rem;
+    border-left: 1px solid rgba(218, 181, 113, 0.55);
+    background: linear-gradient(90deg, rgba(214, 174, 105, 0.09), transparent);
+  }
+
+  .story-family-note > span {
+    display: block;
+    margin-bottom: 0.55rem;
+    color: #e9c98e;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .story-closing {
+    max-width: 34rem;
+    margin-left: auto;
+  }
+
+  .story-closing p {
+    color: #f3dfba;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.55rem;
+    line-height: 1.22;
+  }
+
+  .story-editorial-inner > .story-milestones {
+    margin-top: 2.7rem;
+  }
+
+  .section-memories {
+    padding-block: 6.5rem;
+    background:
+      radial-gradient(ellipse at 88% 44%, rgba(187, 125, 73, 0.13), transparent 34rem),
+      linear-gradient(180deg, #100c0a, #17110e 48%, #100c0a);
+  }
+
+  .memories-heading {
+    max-width: 36rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .memories-heading p {
+    max-width: 30rem;
+    margin: 1.15rem 0 0;
+    color: rgba(245, 235, 220, 0.68);
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+
+  .section-memories .photo-grid {
+    gap: 1.5rem;
+  }
+
+  .section-memories .photo-card {
+    width: 92%;
+    height: 29rem;
+    min-height: 0;
+  }
+
+  .section-memories .photo-card-1 {
+    justify-self: start;
+  }
+
+  .section-memories .photo-card-2 {
+    width: 88%;
+    justify-self: end;
+    margin-top: -0.3rem;
+  }
+
+  .section-memories .photo-card-3 {
+    width: 94%;
+    justify-self: start;
+    margin: -0.35rem 0 0 0.75rem;
+  }
+
+  .photo-card:active img {
+    filter: saturate(0.98) contrast(1.03) brightness(0.93) sepia(0);
+  }
+
+  .ceremony-scene {
+    min-height: 100svh;
+  }
+
+  .ceremony-scene-photo {
+    object-position: center 44%;
+    opacity: 0.42;
+    filter: saturate(0.72) contrast(1.04) brightness(0.54);
+  }
+
+  .ceremony-scene-overlay {
+    background:
+      linear-gradient(180deg, #100c0a 0%, rgba(12, 9, 7, 0.28) 22%, rgba(12, 9, 7, 0.55) 78%, #100c0a 100%),
+      linear-gradient(90deg, rgba(9, 7, 6, 0.72), rgba(9, 7, 6, 0.14) 52%, rgba(9, 7, 6, 0.76));
+  }
+
+  .ceremony-scene-heading {
+    max-width: 28rem;
+    margin-bottom: 2rem;
+  }
+
+  .ceremony-copy {
+    display: grid;
+    max-width: 34rem;
+    margin-left: auto;
+    padding: 1.35rem;
+    gap: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    background: rgba(17, 13, 10, 0.59);
+    box-shadow:
+      0 28px 80px rgba(0, 0, 0, 0.42),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+  }
+
+  .section-invitation {
+    position: relative;
+    min-height: 90svh;
+  }
+
+  .invitation-date {
+    position: absolute;
+    top: 2rem;
+    left: -0.5rem;
+    z-index: -1;
+    color: rgba(237, 207, 152, 0.05);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 8rem;
+    font-weight: 600;
+    line-height: 0.8;
+    user-select: none;
+  }
+
+  .invitation-editorial {
+    display: grid;
+    margin-bottom: 2.5rem;
+    gap: 1.4rem;
+  }
+
+  .invitation-heading {
+    max-width: 30rem;
+  }
+
+  .section-invitation .invitation-copy {
+    max-width: 34rem;
+    margin: 0;
+    text-align: left;
+  }
+
+  .section-invitation .event-grid > div:nth-child(2) {
+    margin-top: 0.9rem;
+  }
+
+  .section-invitation .event-grid > div:nth-child(3) {
+    margin-top: 0.3rem;
+  }
+
+  .section-timeline .section-heading {
+    margin-right: 0;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .section-timeline .timeline-wrap {
+    max-width: 42rem;
+    margin-left: auto;
+  }
+
+  .section-locations .section-heading {
+    margin-right: 0;
+    text-align: right;
+  }
+
+  .event-card:hover .card-icon,
+  .location-card:hover .card-icon,
+  .event-card:active .card-icon,
+  .location-card:active .card-icon {
+    filter: drop-shadow(0 0 20px rgba(236, 203, 141, 0.58));
+  }
+
+  .event-card .card-icon,
+  .location-card .card-icon {
+    transition: filter 320ms ease;
   }
 }
 
@@ -932,6 +1294,110 @@
     .location-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+
+    .memory-scene,
+    .ceremony-scene,
+    .editorial-section {
+      padding-inline: 2rem;
+    }
+
+    .message-scene-heading h2,
+    .story-editorial-heading h2,
+    .memories-heading h2,
+    .ceremony-scene-heading h2,
+    .invitation-heading h2 {
+      font-size: 4rem;
+    }
+
+    .message-editorial-grid {
+      grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 1.1fr);
+      align-items: end;
+      gap: 2.5rem;
+    }
+
+    .message-note {
+      margin-left: auto;
+    }
+
+    .story-date-ghost {
+      top: 5rem;
+      right: -1rem;
+      font-size: 11rem;
+    }
+
+    .story-milestones {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: start;
+    }
+
+    .story-milestones > div:nth-child(2) {
+      margin-top: 1.2rem;
+    }
+
+    .story-milestones > div:nth-child(3) {
+      margin-top: 0.35rem;
+    }
+
+    .section-memories .photo-grid {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      align-items: center;
+      gap: 0;
+      min-height: 43rem;
+    }
+
+    .section-memories .photo-card {
+      width: 100%;
+      margin: 0;
+    }
+
+    .section-memories .photo-card-1 {
+      grid-column: 1 / 6;
+      grid-row: 1;
+      height: 31rem;
+      align-self: start;
+      margin-top: 1.8rem;
+      transform-origin: right center;
+    }
+
+    .section-memories .photo-card-2 {
+      grid-column: 5 / 10;
+      grid-row: 1;
+      z-index: 2;
+      height: 39rem;
+      transform-origin: center;
+    }
+
+    .section-memories .photo-card-3 {
+      grid-column: 9 / 13;
+      grid-row: 1;
+      height: 29rem;
+      align-self: end;
+      margin-bottom: 1.6rem;
+      transform-origin: left center;
+    }
+
+    .ceremony-scene-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(22rem, 1.18fr);
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .ceremony-scene-heading {
+      margin-bottom: 0;
+    }
+
+    .invitation-date {
+      top: 1rem;
+      left: 2rem;
+      font-size: 12rem;
+    }
+
+    .invitation-editorial {
+      grid-template-columns: minmax(0, 0.9fr) minmax(20rem, 1.1fr);
+      align-items: end;
+      gap: 3rem;
+    }
   }
 
   @media (min-width: 820px) {
@@ -939,6 +1405,25 @@
       grid-template-columns: minmax(0, 1.18fr) minmax(18rem, 0.82fr);
       align-items: center;
       gap: 3rem;
+    }
+
+    .story-editorial-grid {
+      grid-template-columns: minmax(0, 1.12fr) minmax(18rem, 0.88fr);
+      align-items: start;
+      gap: 2rem 3.5rem;
+    }
+
+    .story-copy-main {
+      grid-row: 1 / span 2;
+    }
+
+    .story-family-note {
+      margin-top: 3rem;
+    }
+
+    .story-closing {
+      grid-column: 2;
+      margin-top: 1rem;
     }
   }
 
@@ -950,6 +1435,49 @@
 
     .section-band {
       padding-block: 7rem;
+    }
+
+    .memory-scene,
+    .ceremony-scene,
+    .editorial-section {
+      padding-block: 8rem;
+    }
+
+    .message-scene-photo {
+      object-position: center 42%;
+    }
+
+    .story-date-ghost {
+      right: 4%;
+      font-size: 14rem;
+    }
+
+    .memories-heading {
+      margin-left: 4rem;
+    }
+
+    .section-memories .photo-grid {
+      min-height: 47rem;
+    }
+
+    .section-memories .photo-card-1 {
+      height: 34rem;
+    }
+
+    .section-memories .photo-card-2 {
+      height: 43rem;
+    }
+
+    .section-memories .photo-card-3 {
+      height: 32rem;
+    }
+
+    .section-timeline .section-heading {
+      margin-left: 3rem;
+    }
+
+    .section-locations .section-heading {
+      margin-right: 3rem;
     }
   }
 

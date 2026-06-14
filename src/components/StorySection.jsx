@@ -1,38 +1,51 @@
 import { Reveal } from "./Reveal.jsx";
-import { SectionShell } from "./SectionShell.jsx";
 
 export function StorySection({ data }) {
   return (
-    <SectionShell
-      id={data.id}
-      eyebrow={data.eyebrow}
-      title={data.title}
-      className="section-story"
-    >
-      <div className="story-layout">
-        <Reveal className="story-copy">
-          <div className="story-date">
-            <span>Marco inicial</span>
-            <strong>12/05/2020</strong>
-          </div>
-          {data.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
+    <section id={data.id} className="editorial-section section-story">
+      <span className="story-date-ghost" aria-hidden="true">
+        12/05
+      </span>
+      <div className="section-inner story-editorial-inner">
+        <Reveal className="story-editorial-heading" direction="right">
+          <span className="section-eyebrow">{data.eyebrow}</span>
+          <h2>{data.title}</h2>
         </Reveal>
-        <Reveal delay={0.08}>
-          <div className="story-milestones">
-            {data.milestones.map((milestone, index) => (
-              <div className="story-step" key={milestone.title}>
+        <div className="story-editorial-grid">
+          <Reveal className="story-copy story-copy-main" direction="right" delay={0.06}>
+            <div className="story-date">
+              <span>Marco inicial</span>
+              <strong>12/05/2020</strong>
+            </div>
+            <p>{data.paragraphs[0]}</p>
+            <p>{data.paragraphs[1]}</p>
+          </Reveal>
+          <Reveal className="story-family-note" direction="left" delay={0.16}>
+            <span>Família</span>
+            <p>{data.paragraphs[2]}</p>
+          </Reveal>
+          <Reveal className="story-closing" delay={0.24}>
+            <p>{data.paragraphs[3]}</p>
+          </Reveal>
+        </div>
+        <div className="story-milestones">
+          {data.milestones.map((milestone, index) => (
+            <Reveal
+              direction={index === 1 ? "up" : index === 0 ? "right" : "left"}
+              delay={0.08 + index * 0.09}
+              key={milestone.title}
+            >
+              <div className="story-step">
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <div>
                   <p>{milestone.title}</p>
                   <small>{milestone.detail}</small>
                 </div>
               </div>
-            ))}
-          </div>
-        </Reveal>
+            </Reveal>
+          ))}
+        </div>
       </div>
-    </SectionShell>
+    </section>
   );
 }

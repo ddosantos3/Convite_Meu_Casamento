@@ -15,3 +15,7 @@
 - Centralizar os três links do Google Maps em uma constante compartilhada dentro de `weddingData.js`.
 - Abrir mapas em nova aba com `target="_blank"` e `rel="noopener noreferrer"`.
 - Não implementar backend, RSVP, formulário, botão de WhatsApp ou coleta de dados.
+- Tratar mensagem especial e cerimônia como cenas fotográficas com parallax, preservando os textos existentes.
+- Usar composição editorial assimétrica na história, memórias e convite para evitar repetição de layout.
+- Estender `Reveal` com direção, distância e escala configuráveis sem alterar o comportamento padrão.
+- Manter os efeitos leves e baseados em transform/opacity para preservar fluidez no mobile.

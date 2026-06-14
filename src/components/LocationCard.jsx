@@ -24,16 +24,19 @@ export function LocationCard({ card }) {
       <h3>{card.name}</h3>
       <p className="location-microcopy">{card.microcopy}</p>
       <p>{card.description}</p>
-      <a
+      <motion.a
         href={card.mapUrl}
         className="location-link"
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Ver localização de ${card.name} no Google Maps`}
+        whileHover={shouldReduceMotion ? undefined : { y: -2, x: 2 }}
+        whileTap={shouldReduceMotion ? undefined : { scale: 0.97 }}
+        transition={{ duration: 0.18, ease: "easeOut" }}
       >
         <ExternalLink size={16} aria-hidden="true" />
         <span>Ver localização</span>
-      </a>
+      </motion.a>
     </motion.article>
   );
 }

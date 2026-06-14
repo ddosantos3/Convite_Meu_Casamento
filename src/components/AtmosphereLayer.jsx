@@ -10,7 +10,13 @@ export function AtmosphereLayer() {
         animate={
           shouldReduceMotion
             ? undefined
-            : { x: ["-4%", "5%", "-4%"], y: ["0%", "7%", "0%"], opacity: [0.34, 0.48, 0.34] }
+            : {
+                x: ["-4%", "5%", "-4%"],
+                y: ["0%", "7%", "0%"],
+                scale: [0.96, 1.06, 0.96],
+                rotate: [-2, 3, -2],
+                opacity: [0.34, 0.48, 0.34],
+              }
         }
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -19,7 +25,13 @@ export function AtmosphereLayer() {
         animate={
           shouldReduceMotion
             ? undefined
-            : { x: ["4%", "-5%", "4%"], y: ["2%", "-5%", "2%"], opacity: [0.24, 0.38, 0.24] }
+            : {
+                x: ["4%", "-5%", "4%"],
+                y: ["2%", "-5%", "2%"],
+                scale: [1.05, 0.95, 1.05],
+                rotate: [2, -3, 2],
+                opacity: [0.24, 0.38, 0.24],
+              }
         }
         transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
       />

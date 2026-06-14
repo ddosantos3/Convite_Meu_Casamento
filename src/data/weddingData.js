@@ -20,6 +20,7 @@ export const weddingData = {
     id: "para-alguem-especial",
     eyebrow: "Você faz parte disso",
     title: "Para alguém especial",
+    image: "/images/1.webp",
     paragraphs: [
       "Este convite chegou até você porque sua presença tem valor em nossa vida.",
       "Nossa cerimônia será simples, íntima e feita de todo coração. Queremos viver esse momento ao lado de pessoas que, de alguma forma, fazem parte da nossa caminhada.",
@@ -79,6 +80,7 @@ export const weddingData = {
     id: "sobre-a-cerimonia",
     eyebrow: "Sobre a cerimônia",
     title: "Um momento íntimo",
+    image: "/images/3.webp",
     paragraphs: [
       "Nosso casamento será uma cerimônia íntima, simples e muito especial.",
       "Escolhemos viver esse momento ao lado das pessoas mais próximas, aquelas que de alguma forma fazem parte da nossa caminhada e da nossa história.",

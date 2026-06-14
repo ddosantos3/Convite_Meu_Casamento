@@ -16,7 +16,13 @@ export function HeroSection({ data }) {
         aria-hidden="true"
         fetchPriority="high"
         decoding="async"
-        style={{ y: imageY, scale: 1.08 }}
+        style={{ y: imageY }}
+        animate={
+          shouldReduceMotion
+            ? { scale: 1.08 }
+            : { scale: [1.08, 1.14, 1.08] }
+        }
+        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
       <div className="hero-photo-overlay" aria-hidden="true" />
       <div className="hero-ambient" aria-hidden="true" />

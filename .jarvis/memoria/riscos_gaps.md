@@ -3,6 +3,7 @@
 ## Riscos atuais
 
 - A validação automatizada cobre Chrome em mobile e desktop, mas não substitui a conferência final em aparelhos reais.
+- Parallax, blur e backdrop-filter podem variar em aparelhos móveis mais antigos; `prefers-reduced-motion` reduz as animações, mas a conferência física continua recomendada.
 - A URL pública final da Vercel ainda precisa ser confirmada.
 
 ## Segurança e privacidade

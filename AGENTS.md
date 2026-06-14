@@ -6,7 +6,7 @@ Jarvis coordena qualquer demanda neste projeto, mantendo memória operacional e 
 
 ## Estado atual
 
-O projeto possui uma terceira versão conceitual do convite web de casamento de Douglas e Regiane, com narrativa contínua, fotos WebP, tipografia editorial, profundidade visual e motion suave.
+O projeto possui uma quarta versão conceitual do convite web de casamento de Douglas e Regiane, com cenas fotográficas, composição editorial assimétrica, fotos WebP, profundidade visual e motion suave.
 
 ## Classificação da entrega
 
@@ -18,7 +18,7 @@ O projeto possui uma terceira versão conceitual do convite web de casamento de 
 ## Fluxo local
 
 1. Ler `.jarvis/memoria` antes de alterar o projeto.
-2. Conferir `prompt.md` quando a demanda envolver escopo do convite.
+2. Conferir `prompt.md`, `prompt2.md`, `prompt3.md` e `prompt4.md` conforme a evolução solicitada.
 3. Manter `src/data/weddingData.js` como fonte central dos dados editáveis.
 4. Atualizar memória após mudanças relevantes.
 5. Manter README coerente com o estado real.

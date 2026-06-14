@@ -2,11 +2,11 @@
 
 ## Situação
 
-Terceira versão conceitual do convite web de casamento de Douglas e Regiane implementada.
+Quarta versão conceitual do convite web de casamento de Douglas e Regiane implementada.
 
 ## Demanda mais recente
 
-Usuário forneceu os links do Google Maps para o cartório, a paróquia e a chácara, solicitando correção dos botões e commit no repositório.
+Usuário solicitou a aplicação integral de `prompt4.md`, preservando tudo que já funcionava, seguida de commit e atualização do repositório.
 
 ## Classificação
 
@@ -18,10 +18,14 @@ Usuário forneceu os links do Google Maps para o cartório, a paróquia e a chá
 
 ## Estado técnico
 
-- Repositório atualizado por fast-forward com `prompt3.md`.
-- V3 usa Cormorant Garamond nos títulos e Manrope nos textos.
-- Background possui camadas atmosféricas leves, grain e light leaks com Framer Motion.
-- Narrativa reorganizada para: abertura, mensagem especial, história, memórias, cerimônia, convite, roteiro, locais e encerramento.
+- `prompt4.md` incorporado ao projeto como referência da V4.
+- V4 usa Cormorant Garamond nos títulos e Manrope nos textos.
+- Background possui camadas atmosféricas vivas, grain, light leaks, escala e rotação lentas com Framer Motion.
+- Mensagem especial e cerimônia funcionam como cenas fotográficas em tela cheia.
+- História usa data em grande escala, blocos editoriais e marcos assimétricos.
+- Fotos formam uma composição orgânica sobreposta no desktop e alternada no mobile.
+- Convite, timeline e locais preservam clareza funcional com ritmos visuais distintos.
+- Hero possui zoom cinematográfico lento e timeline acende os pontos em sequência.
 - Fotos reais servidas como WebP de aproximadamente 100 KB cada.
 - PNGs originais preservados em `assets/source-images/`.
 - Build preparado para Vercel e abaixo de 1 MB.
@@ -37,4 +41,4 @@ Usuário forneceu os links do Google Maps para o cartório, a paróquia e a chá
 
 ## Próximo passo recomendado
 
-Publicar a atualização na Vercel e conferir os links em celulares reais antes do envio pelo WhatsApp.
+Publicar a V4 na Vercel e conferir o movimento e os links em celulares reais antes do envio pelo WhatsApp.
