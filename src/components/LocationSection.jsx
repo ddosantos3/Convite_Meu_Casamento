@@ -11,7 +11,7 @@ export function LocationSection({ data }) {
       title={data.title}
       className="section-locations"
     >
-      <InvitationOrnament align="right" className="locations-ornament" />
+      <InvitationOrnament className="locations-ornament" />
       <div className="location-grid">
         {data.cards.map((card, index) => (
           <Reveal delay={index * 0.06} key={card.name}>

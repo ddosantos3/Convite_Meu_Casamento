@@ -4,6 +4,8 @@ O projeto contém a identidade visual final do convite web de Douglas e Regiane,
 
 A experiência combina cenas fotográficas mais luminosas, bases em grafite e carvão, datas monumentais, blocos editoriais assimétricos, colagem orgânica de fotos, ornamentos de folhagem e partículas leves. Hero, fundos, reveals, timeline, cards e links usam motion sutil com respeito a `prefers-reduced-motion`.
 
+O refinamento mais recente estabilizou ordem e alinhamento: data abaixo do monograma, cards com topo e base consistentes, fotos sem sobreposição e cabeçalhos conectados às respectivas grades.
+
 As três fotos são servidas em WebP com cerca de 100 KB cada. Os PNGs originais permanecem em `assets/source-images/` e podem ser reprocessados com `npm run optimize:images`.
 
 Não há RSVP, formulário, botão de WhatsApp ou coleta de dados. Os três botões de localização apontam para o Google Maps.

@@ -123,7 +123,7 @@ Executado em 2026-06-14:
 - `npm audit`
 - `npm run test:e2e`
 
-Resultado: build concluído, auditoria sem vulnerabilidades e testes aprovados em `390x844` e `1440x1000`.
+Resultado: build concluído, auditoria sem vulnerabilidades e testes aprovados em `390x844` e `1440x1000`, incluindo ordem do Hero, alinhamento dos cards e ausência de sobreposição entre fotos.
 
 A revisão visual também foi feita por screenshots completas do Playwright nos dois formatos.
 

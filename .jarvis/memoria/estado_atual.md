@@ -6,7 +6,7 @@ Identidade visual final do convite web de casamento de Douglas e Regiane impleme
 
 ## Demanda mais recente
 
-Usuário ampliou `prompt4.md` e solicitou mais luminosidade, vida, decoração personalizada e identidade de convite, preservando o funcionamento existente.
+Usuário solicitou um pente fino de alinhamento e ordenação a partir de screenshots, preservando todo o funcionamento existente.
 
 ## Classificação
 
@@ -26,6 +26,10 @@ Usuário ampliou `prompt4.md` e solicitou mais luminosidade, vida, decoração p
 - Fotos do Hero, mensagem, cerimônia e encerramento receberam tratamento mais luminoso.
 - Cards usam vidro em camadas, borda champagne e glow seletivo.
 - Ícones temáticos representam amor, família, fé, localização e celebração.
+- Hero organiza monograma, data, nomes e mensagem em uma coluna central previsível.
+- Marcos da história e cards de convite e locais compartilham linhas-base e alturas consistentes.
+- Fotos preservam a composição editorial sem sobreposição ou corte de legendas no desktop.
+- Cabeçalho de locais está alinhado à mesma margem da grade de cards.
 - Mensagem especial e cerimônia funcionam como cenas fotográficas em tela cheia.
 - História usa data em grande escala, blocos editoriais e marcos assimétricos.
 - Fotos formam uma composição orgânica sobreposta no desktop e alternada no mobile.
@@ -41,7 +45,7 @@ Usuário ampliou `prompt4.md` e solicitou mais luminosidade, vida, decoração p
 - `npm run optimize:images`: aprovado.
 - `npm run build`: aprovado.
 - `npm audit`: sem vulnerabilidades.
-- `npm run test:e2e`: 2 testes aprovados em mobile `390x844` e desktop `1440x1000`, incluindo ornamentos, partículas e mapas.
+- `npm run test:e2e`: 2 testes aprovados em mobile `390x844` e desktop `1440x1000`, incluindo verificações geométricas de ordem, alinhamento, alturas e ausência de sobreposição.
 - Revisão visual realizada por screenshots Playwright.
 
 ## Próximo passo recomendado

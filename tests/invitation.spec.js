@@ -51,6 +51,58 @@ test("renders the complete invitation without horizontal overflow", async ({ pag
   );
   expect(hasHorizontalOverflow).toBe(false);
 
+  const heroOrder = await page.evaluate(() => {
+    const monogram = document.querySelector(".hero-monogram")?.getBoundingClientRect();
+    const date = document.querySelector(".date-pill")?.getBoundingClientRect();
+
+    return monogram && date
+      ? {
+          monogramBottom: monogram.bottom,
+          dateTop: date.top,
+          centerDifference: Math.abs(
+            monogram.left + monogram.width / 2 - (date.left + date.width / 2),
+          ),
+        }
+      : null;
+  });
+  expect(heroOrder).not.toBeNull();
+  expect(heroOrder.dateTop).toBeGreaterThanOrEqual(heroOrder.monogramBottom);
+  expect(heroOrder.centerDifference).toBeLessThanOrEqual(1);
+
+  if (testInfo.project.name === "desktop") {
+    const alignment = await page.evaluate(() => {
+      const boxes = (selector) =>
+        [...document.querySelectorAll(selector)].map((element) => {
+          const rect = element.getBoundingClientRect();
+          return { top: rect.top, right: rect.right, bottom: rect.bottom, left: rect.left };
+        });
+      const spread = (values) => Math.max(...values) - Math.min(...values);
+      const photos = boxes(".photo-card");
+
+      return {
+        storyTopSpread: spread(boxes(".story-step").map((box) => box.top)),
+        eventTopSpread: spread(boxes(".event-card").map((box) => box.top)),
+        eventBottomSpread: spread(boxes(".event-card").map((box) => box.bottom)),
+        locationTopSpread: spread(boxes(".location-card").map((box) => box.top)),
+        locationBottomSpread: spread(boxes(".location-card").map((box) => box.bottom)),
+        photosOverlap: photos.some((photo, index) =>
+          photos.slice(index + 1).some(
+            (other) =>
+              Math.min(photo.right, other.right) > Math.max(photo.left, other.left) &&
+              Math.min(photo.bottom, other.bottom) > Math.max(photo.top, other.top),
+          ),
+        ),
+      };
+    });
+
+    expect(alignment.storyTopSpread).toBeLessThanOrEqual(2);
+    expect(alignment.eventTopSpread).toBeLessThanOrEqual(2);
+    expect(alignment.eventBottomSpread).toBeLessThanOrEqual(2);
+    expect(alignment.locationTopSpread).toBeLessThanOrEqual(2);
+    expect(alignment.locationBottomSpread).toBeLessThanOrEqual(2);
+    expect(alignment.photosOverlap).toBe(false);
+  }
+
   await page.screenshot({
     path: testInfo.outputPath("invitation.png"),
     fullPage: true,

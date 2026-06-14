@@ -2,6 +2,12 @@
 
 ## 2026-06-14
 
+- Corrigida a ordem do Hero para manter a data abaixo de `D · R`.
+- Uniformizadas linhas-base e alturas dos marcos da história e cards de eventos e locais.
+- Removidos offsets verticais que deixavam cards visualmente desalinhados.
+- Reorganizadas as fotos no desktop em três colunas sem sobreposição ou corte de legendas.
+- Alinhados título, ornamento e grade da seção de locais pela margem esquerda.
+- Adicionadas asserções geométricas de alinhamento aos testes Playwright.
 - Aplicada a revisão ampliada de `prompt4.md` como identidade visual final.
 - Clareadas as cenas fotográficas do Hero, mensagem, cerimônia e encerramento.
 - Adicionadas bases em grafite e carvão para reduzir a sensação de página escura repetitiva.

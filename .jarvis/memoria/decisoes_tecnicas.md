@@ -23,3 +23,6 @@
 - Usar somente partículas pequenas e esparsas para preservar desempenho e evitar poluição visual.
 - Equilibrar a base quente com grafite e carvão para aumentar luminosidade sem transformar o convite em uma paleta monocromática marrom.
 - Preservar os links reais do Google Maps apesar da instrução condicional de `href="#"` no prompt revisado, pois as URLs já foram fornecidas e aprovadas.
+- Preferir alinhamento por flex/grid e alturas estáveis em vez de margens individuais que deslocam cards.
+- Manter variação editorial nas alturas das fotos, mas alinhar suas bases e impedir sobreposição de áreas clicáveis ou legendas.
+- Validar relações geométricas críticas pelo Playwright para evitar regressões de alinhamento.
