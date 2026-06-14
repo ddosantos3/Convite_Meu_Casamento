@@ -2,21 +2,17 @@
 
 ## 2026-06-14
 
-- Preparado deploy na Vercel com `vercel.json`.
-- Adicionado `.nvmrc` com Node `22.12.0`.
-- Adicionado `engines.node >=22.12.0` no `package.json`.
-- Sincronizado `package-lock.json`.
-- Atualizado README com instruções de deploy na Vercel.
-- Executados `npm run build` e `npm audit` após a preparação de deploy.
-- Lido `prompt2.md` com pedidos de evolução visual da V2.
-- Ajustados dados para usar imagens reais `public/images/1.png`, `2.png` e `3.png`.
-- Atualizado Hero com foto real de fundo, overlay escuro, glow champagne e entrada em camadas.
-- Atualizada seção "Nossa história" com destaque para `12/05/2020` e marcadores: "O começo", "Ravi e Maria Eduarda" e "O nosso sim".
-- Atualizada galeria com fotos reais, entrada com scale, bordas quentes, hover/tap e composição assimétrica no desktop.
-- Atualizada timeline com linha animada, pontos com glow e cards leves para cada etapa.
-- Atualizados cards de locais e convite oficial com hover suave e visual menos seco.
-- Atualizado encerramento com foto real desfocada, glow quente e assinatura mais presente.
-- Reescrito CSS para reduzir frieza do dark e adicionar tons champagne, dourado queimado discreto, cinza quente e off-white.
-- Atualizados README, AGENTS local e memória Jarvis.
-- Executado `npm run build` com sucesso.
-- Executado `npm audit` sem vulnerabilidades.
+- Atualizado repositório local por fast-forward e lido `prompt3.md`.
+- Criada V3 conceitual com narrativa visual contínua.
+- Adicionadas fontes self-hosted Cormorant Garamond e Manrope.
+- Criada camada atmosférica animada com light leaks e halos difusos.
+- Refinados hero, história, memórias, cerimônia, convite, timeline, locais e encerramento.
+- Atualizados títulos e microtextos conforme `prompt3.md`.
+- Removida seção redundante `PresenceSection`.
+- Adicionado parallax leve às fotos e perspectiva discreta aos cards.
+- Convertidas as fotos para WebP, reduzindo cada arquivo de cerca de 2.1 MB para aproximadamente 100 KB.
+- Movidos PNGs originais para `assets/source-images/`.
+- Adicionado script `npm run optimize:images`.
+- Adicionado Playwright com validação mobile e desktop.
+- Executados `npm run build`, `npm audit` e `npm run test:e2e` com sucesso.
+- Atualizados README, AGENTS e memória Jarvis.

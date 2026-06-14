@@ -4,6 +4,5 @@
   - Cartório Parra.
   - Paróquia Sagrado Coração de Jesus.
   - Chácara do Vô Luizão.
-- Otimizar as imagens reais em `public/images/` para WebP/JPG antes da publicação final.
-- Conectar o repositório na Vercel e publicar.
-- Fazer revisão visual final em celular real antes de enviar o link pelo WhatsApp.
+- Conectar ou atualizar o projeto na Vercel e publicar.
+- Conferir a URL final em celulares reais antes de enviar pelo WhatsApp.

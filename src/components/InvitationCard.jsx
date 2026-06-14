@@ -7,10 +7,13 @@ export function InvitationCard({ event, icon: Icon = Heart }) {
   return (
     <motion.article
       className="event-card"
-      whileHover={shouldReduceMotion ? undefined : { y: -4 }}
+      whileHover={shouldReduceMotion ? undefined : { y: -5, rotateX: 1.2, rotateY: 1.2 }}
+      whileTap={shouldReduceMotion ? undefined : { scale: 0.99 }}
       transition={{ duration: 0.22, ease: "easeOut" }}
     >
-      <Icon className="card-icon" size={22} aria-hidden="true" />
+      <span className="card-icon-wrap">
+        <Icon className="card-icon" size={21} aria-hidden="true" />
+      </span>
       <h3>{event.title}</h3>
       <div className="event-line">
         <Clock size={16} aria-hidden="true" />

@@ -6,7 +6,7 @@ Jarvis coordena qualquer demanda neste projeto, mantendo memória operacional e 
 
 ## Estado atual
 
-O projeto possui uma segunda versão funcional do convite web de casamento de Douglas e Regiane, com visual mais emocional, fotos reais e motion suave.
+O projeto possui uma terceira versão conceitual do convite web de casamento de Douglas e Regiane, com narrativa contínua, fotos WebP, tipografia editorial, profundidade visual e motion suave.
 
 ## Classificação da entrega
 
@@ -23,7 +23,7 @@ O projeto possui uma segunda versão funcional do convite web de casamento de Do
 4. Atualizar memória após mudanças relevantes.
 5. Manter README coerente com o estado real.
 6. Registrar riscos e pendências quando houver decisão aberta.
-7. Validar com `npm run build` e, quando houver dependências novas, `npm audit`.
+7. Validar com `npm run build`, `npm run test:e2e` e, quando houver dependências novas, `npm audit`.
 8. Sugerir commit semântico ao final de uma entrega.
 
 ## Agentes aplicáveis
@@ -42,3 +42,4 @@ O projeto possui uma segunda versão funcional do convite web de casamento de Do
 - Preservar tom humano, simples, íntimo e emocional.
 - Manter brilho e animações discretos.
 - Trocar os links `#` dos mapas antes de publicar.
+- Manter os PNGs originais em `assets/source-images/` e servir os WebP gerados em `public/images/`.

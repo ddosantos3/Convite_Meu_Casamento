@@ -7,7 +7,13 @@ export function TimelineSection({ data }) {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <SectionShell id={data.id} title={data.title} narrow>
+    <SectionShell
+      id={data.id}
+      eyebrow={data.eyebrow}
+      title={data.title}
+      className="section-timeline"
+      narrow
+    >
       <Reveal>
         <div className="timeline-wrap">
           <motion.span

@@ -14,6 +14,8 @@ export function HeroSection({ data }) {
         src={data.hero.image}
         alt=""
         aria-hidden="true"
+        fetchPriority="high"
+        decoding="async"
         style={{ y: imageY, scale: 1.08 }}
       />
       <div className="hero-photo-overlay" aria-hidden="true" />
@@ -25,6 +27,15 @@ export function HeroSection({ data }) {
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         style={{ y: contentY }}
       >
+        <motion.span
+          className="hero-monogram"
+          aria-hidden="true"
+          initial={shouldReduceMotion ? false : { opacity: 0 }}
+          animate={shouldReduceMotion ? undefined : { opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.06 }}
+        >
+          D · R
+        </motion.span>
         <motion.div
           className="date-pill"
           initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.94 }}

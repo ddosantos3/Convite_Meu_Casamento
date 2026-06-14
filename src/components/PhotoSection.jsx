@@ -6,8 +6,10 @@ export function PhotoSection({ data }) {
   return (
     <SectionShell
       id={data.id}
+      eyebrow={data.eyebrow}
       title={data.title}
       intro={data.intro}
+      className="section-memories"
     >
       <Reveal>
         <div className="photo-grid">

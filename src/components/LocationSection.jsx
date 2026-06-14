@@ -4,7 +4,12 @@ import { SectionShell } from "./SectionShell.jsx";
 
 export function LocationSection({ data }) {
   return (
-    <SectionShell id={data.id} title={data.title}>
+    <SectionShell
+      id={data.id}
+      eyebrow={data.eyebrow}
+      title={data.title}
+      className="section-locations"
+    >
       <div className="location-grid">
         {data.cards.map((card, index) => (
           <Reveal delay={index * 0.06} key={card.name}>

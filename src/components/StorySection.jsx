@@ -1,14 +1,18 @@
-import { GlassCard } from "./GlassCard.jsx";
 import { Reveal } from "./Reveal.jsx";
 import { SectionShell } from "./SectionShell.jsx";
 
 export function StorySection({ data }) {
   return (
-    <SectionShell id={data.id} title={data.title}>
+    <SectionShell
+      id={data.id}
+      eyebrow={data.eyebrow}
+      title={data.title}
+      className="section-story"
+    >
       <div className="story-layout">
         <Reveal className="story-copy">
           <div className="story-date">
-            <span>Desde</span>
+            <span>Marco inicial</span>
             <strong>12/05/2020</strong>
           </div>
           {data.paragraphs.map((paragraph) => (
@@ -16,7 +20,7 @@ export function StorySection({ data }) {
           ))}
         </Reveal>
         <Reveal delay={0.08}>
-          <GlassCard className="story-milestones">
+          <div className="story-milestones">
             {data.milestones.map((milestone, index) => (
               <div className="story-step" key={milestone.title}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
@@ -26,7 +30,7 @@ export function StorySection({ data }) {
                 </div>
               </div>
             ))}
-          </GlassCard>
+          </div>
         </Reveal>
       </div>
     </SectionShell>

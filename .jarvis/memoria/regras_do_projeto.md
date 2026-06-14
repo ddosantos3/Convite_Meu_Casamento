@@ -1,13 +1,13 @@
 # Regras do Projeto
 
 - Jarvis coordena a execução e consolida decisões.
-- Memória local deve ser atualizada após mudanças relevantes.
-- README deve refletir o estado real do projeto.
-- Entrega pronta precisa declarar validação, riscos e pendências.
-- O convite deve ser mobile-first, pois será enviado pelo WhatsApp.
+- Memória local e README devem refletir o estado real.
+- O convite deve ser mobile-first e adequado ao compartilhamento por WhatsApp.
 - Não criar RSVP, formulário, confirmação de presença, botão de WhatsApp ou coleta de dados.
-- Manter textos humanos, simples e íntimos, preservando o sentido do briefing.
-- Manter brilho, motion e elementos visuais discretos.
-- Dados editáveis devem permanecer centralizados em `src/data/weddingData.js`.
-- Fotos reais atuais usam os caminhos `/images/1.png`, `/images/2.png` e `/images/3.png`.
-- Antes da publicação, preferir imagens WebP/JPG otimizadas.
+- Preservar textos humanos, simples, íntimos e coerentes com os prompts.
+- Manter brilho, profundidade e motion discretos.
+- Respeitar `prefers-reduced-motion`.
+- Dados editáveis devem permanecer em `src/data/weddingData.js`.
+- PNGs originais ficam em `assets/source-images/`.
+- WebP públicos ficam em `public/images/`.
+- Toda entrega deve passar por build, audit e testes Playwright.

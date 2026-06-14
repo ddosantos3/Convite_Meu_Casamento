@@ -1,10 +1,10 @@
-import { Church, Heart, Utensils } from "lucide-react";
+import { Building2, Church, Utensils } from "lucide-react";
 import { InvitationCard } from "./InvitationCard.jsx";
 import { Reveal } from "./Reveal.jsx";
 import { SectionShell } from "./SectionShell.jsx";
 
 const eventIcons = {
-  civil: Heart,
+  civil: Building2,
   religious: Church,
   celebration: Utensils,
 };
@@ -18,7 +18,12 @@ export function InvitationSection({ data }) {
   ];
 
   return (
-    <SectionShell id={invitation.id} title={invitation.title}>
+    <SectionShell
+      id={invitation.id}
+      eyebrow={invitation.eyebrow}
+      title={invitation.title}
+      className="section-invitation"
+    >
       <Reveal>
         <div className="invitation-copy">
           {invitation.paragraphs.map((paragraph) => (

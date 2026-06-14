@@ -20,6 +20,8 @@ export function FinalMessageSection({ data, couple }) {
       <div className="final-photo-overlay" aria-hidden="true" />
       <Reveal>
         <div className="final-message">
+          <span className="final-eyebrow">Um novo capítulo</span>
+          <h2>{data.title}</h2>
           {data.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}

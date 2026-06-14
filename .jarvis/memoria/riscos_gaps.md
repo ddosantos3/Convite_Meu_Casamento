@@ -2,21 +2,19 @@
 
 ## Riscos atuais
 
-- Links de localização ainda estão como `#`, então os botões "Ver localização" não levam ao Google Maps.
-- As imagens reais estão em PNG com cerca de 2.1 MB cada; a galeria usa lazy loading, mas a publicação final deve usar WebP/JPG otimizado.
-- Ainda não há validação em celular real; a implementação é mobile-first e o build passou, mas o envio por WhatsApp merece conferência no aparelho final.
-- Não há decisão de hospedagem/publicação.
+- Os botões de localização ainda usam `href="#"`.
+- A validação automatizada cobre Chrome em mobile e desktop, mas não substitui a conferência final em aparelhos reais.
+- A URL pública final da Vercel ainda precisa ser confirmada.
 
 ## Segurança e privacidade
 
 - O site não coleta dados pessoais.
 - Não há formulário, RSVP, confirmação de presença, botão de WhatsApp ou integração externa ativa.
-- Links externos de mapa devem ser conferidos antes da publicação para evitar URLs incorretas.
+- Links externos de mapa devem ser conferidos antes da publicação.
 
 ## Mitigações
 
 - Manter dados editáveis em `src/data/weddingData.js`.
-- Trocar todos os `mapUrl` antes do go-live.
-- Otimizar imagens antes de publicar.
-- Rodar `npm run build` após qualquer alteração.
-- Revisar visualmente em mobile antes de compartilhar o link.
+- Rodar `npm run build`, `npm audit` e `npm run test:e2e` após mudanças.
+- Regerar WebP com `npm run optimize:images` ao trocar as fotos.
+- Revisar visualmente em celular real antes de compartilhar.

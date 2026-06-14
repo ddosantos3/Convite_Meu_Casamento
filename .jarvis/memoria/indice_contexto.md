@@ -5,12 +5,13 @@
 - Nome: Convite Douglas & Regiane
 - Caminho: `/mnt/c/Users/Douglas Santos/Desktop/convite`
 - Data de inicialização Jarvis: 2026-06-14
-- Estado: segunda versão funcional implementada
+- Estado: terceira versão conceitual implementada
 
 ## Arquivos de contexto
 
 - `prompt.md`: briefing completo do convite.
 - `prompt2.md`: ajustes de evolução visual e emocional da V2.
+- `prompt3.md`: evolução conceitual, tipográfica, narrativa e de performance da V3.
 - `README.md`: instruções de uso, stack, estrutura e pendências.
 - `AGENTS.md`: regras locais de governança Jarvis.
 

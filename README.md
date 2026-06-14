@@ -1,8 +1,8 @@
 # Convite Douglas & Regiane
 
-Segunda versão funcional de um convite web de casamento para Douglas e Regiane.
+Terceira versão conceitual do convite web de casamento para Douglas e Regiane.
 
-O projeto foi criado para ser enviado por WhatsApp e aberto principalmente no celular. A experiência prioriza leitura confortável, estética dark acolhedora, fotos reais, cards translúcidos, glow champagne, motion suave e tom humano, simples e íntimo.
+O projeto foi criado para ser enviado por WhatsApp e aberto principalmente no celular. A experiência combina dark afetivo, fotos reais, tipografia editorial, glassmorphism, glow champagne e movimento suave para contar a história do casal de forma contínua.
 
 ## Stack
 
@@ -11,6 +11,9 @@ O projeto foi criado para ser enviado por WhatsApp e aberto principalmente no ce
 - TailwindCSS
 - Framer Motion
 - Lucide Icons
+- Cormorant Garamond
+- Manrope
+- Playwright
 
 ## Como Rodar
 
@@ -25,6 +28,18 @@ Build de produção:
 
 ```bash
 npm run build
+```
+
+Otimizar novamente as imagens após trocar os PNGs originais:
+
+```bash
+npm run optimize:images
+```
+
+Validação responsiva:
+
+```bash
+npm run test:e2e
 ```
 
 Prévia do build:
@@ -63,8 +78,8 @@ src/
 │  ├─ InvitationSection.jsx
 │  ├─ TimelineSection.jsx
 │  ├─ LocationSection.jsx
-│  ├─ PresenceSection.jsx
 │  ├─ FinalMessageSection.jsx
+│  ├─ AtmosphereLayer.jsx
 │  ├─ GlassCard.jsx
 │  ├─ InvitationCard.jsx
 │  ├─ LocationCard.jsx
@@ -91,9 +106,11 @@ Ali é possível trocar:
 
 As fotos usadas pelo layout ficam em `public/images/`:
 
-- `/images/1.png`
-- `/images/2.png`
-- `/images/3.png`
+- `/images/1.webp`
+- `/images/2.webp`
+- `/images/3.webp`
+
+Os PNGs originais ficam em `assets/source-images/`. O script `npm run optimize:images` gera novamente os WebP públicos.
 
 Os links dos mapas estão como `#` por enquanto. Substituir cada `mapUrl` pelo link correto do Google Maps antes de publicar.
 
@@ -103,15 +120,15 @@ Executado em 2026-06-14:
 
 - `npm run build`
 - `npm audit`
+- `npm run test:e2e`
 
-Resultado: build concluído e auditoria sem vulnerabilidades.
+Resultado: build concluído, auditoria sem vulnerabilidades e testes aprovados em `390x844` e `1440x1000`.
 
 ## Observação de Performance
 
-As imagens reais estão em PNG e têm cerca de 2.1 MB cada. A galeria usa lazy loading, mas antes da publicação final é recomendável gerar versões WebP/JPG otimizadas.
+Os PNGs originais têm cerca de 2.1 MB cada. As versões WebP servidas pelo site têm aproximadamente 100 KB cada, e o build completo fica abaixo de 1 MB.
 
 ## Pendências
 
 - Substituir `mapUrl: "#"` pelos links reais dos locais.
-- Revisar e otimizar as fotos finais antes da publicação.
 - Conectar o repositório na Vercel e publicar.

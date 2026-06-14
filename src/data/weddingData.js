@@ -3,12 +3,13 @@ export const weddingData = {
   date: "12/09",
   storyStart: "12/05/2020",
   hero: {
-    image: "/images/2.png",
+    image: "/images/2.webp",
     message:
       "Uma cerimônia simples, feita de todo coração, para pessoas que fazem parte da nossa história.",
   },
   specialMessage: {
     id: "para-alguem-especial",
+    eyebrow: "Você faz parte disso",
     title: "Para alguém especial",
     paragraphs: [
       "Este convite chegou até você porque sua presença tem valor em nossa vida.",
@@ -18,7 +19,8 @@ export const weddingData = {
   },
   story: {
     id: "nossa-historia",
-    title: "Nossa história",
+    eyebrow: "Nossa história",
+    title: "Desde 12/05/2020",
     paragraphs: [
       "Nossa história começou em 12/05/2020.",
       "Desde então, fomos construindo uma caminhada feita de amor, parceria, aprendizados e escolhas. Entre os dias simples, os desafios vencidos e os sonhos que fomos criando juntos, entendemos que o amor também mora nos detalhes, na presença, no cuidado e na vontade de seguir lado a lado.",
@@ -42,30 +44,32 @@ export const weddingData = {
   },
   photos: {
     id: "fotos",
+    eyebrow: "Memórias",
     title: "Alguns pedaços da nossa história",
     intro:
       "Pequenos registros de uma caminhada que seguimos construindo com amor, cuidado e presença.",
     items: [
       {
         // Trocar por outra foto real do casal ou da família, se necessário.
-        src: "/images/1.png",
+        src: "/images/1.webp",
         alt: "Foto 1 de Douglas e Regiane",
       },
       {
         // Trocar por outra foto real do casal ou da família, se necessário.
-        src: "/images/2.png",
+        src: "/images/2.webp",
         alt: "Foto 2 de Douglas e Regiane",
       },
       {
         // Trocar por outra foto real do casal ou da família, se necessário.
-        src: "/images/3.png",
+        src: "/images/3.webp",
         alt: "Foto 3 de Douglas e Regiane",
       },
     ],
   },
   ceremony: {
     id: "sobre-a-cerimonia",
-    title: "Sobre a cerimônia",
+    eyebrow: "Sobre a cerimônia",
+    title: "Um momento íntimo",
     paragraphs: [
       "Nosso casamento será uma cerimônia íntima, simples e muito especial.",
       "Escolhemos viver esse momento ao lado das pessoas mais próximas, aquelas que de alguma forma fazem parte da nossa caminhada e da nossa história.",
@@ -74,7 +78,8 @@ export const weddingData = {
   },
   invitation: {
     id: "o-nosso-convite",
-    title: "O nosso convite",
+    eyebrow: "O nosso convite",
+    title: "O dia do nosso sim",
     paragraphs: [
       "Com alegria e gratidão, convidamos você para celebrar conosco o dia em que diremos o nosso sim.",
       "Será um momento simples, mas cheio de significado. E a sua presença tornará esse dia ainda mais especial para nós.",
@@ -105,6 +110,7 @@ export const weddingData = {
   },
   dayTimeline: {
     id: "como-sera-o-dia",
+    eyebrow: "Roteiro do dia",
     title: "Como será o dia",
     items: [
       {
@@ -126,38 +132,36 @@ export const weddingData = {
   },
   locations: {
     id: "locais",
+    eyebrow: "Onde estaremos",
     title: "Locais",
     cards: [
       {
+        type: "civil",
         name: "Cartório Parra",
-        description: "Casamento Civil às 09:00",
+        microcopy: "Onde damos o primeiro passo oficial desse dia.",
+        description: "Casamento Civil às 09:00.",
         mapUrl: "#", // Substituir o href pelo link correto do Google Maps.
       },
       {
+        type: "religious",
         name: "Paróquia Sagrado Coração de Jesus",
-        description: "Casamento Religioso às 11:00",
+        microcopy: "Onde celebraremos nossa união diante de Deus.",
+        description: "Casamento Religioso às 11:00.",
         mapUrl: "#", // Substituir o href pelo link correto do Google Maps.
       },
       {
+        type: "celebration",
         name: "Chácara do Vô Luizão",
-        description:
-          "Comemoração após o casamento religioso, com churrasco, carinho e pessoas especiais por perto.",
+        microcopy: "Depois da cerimônia, seguimos para comemorar de um jeito simples, leve e nosso.",
+        description: "Comemoração após o casamento religioso.",
         mapUrl: "#", // Substituir o href pelo link correto do Google Maps.
       },
-    ],
-  },
-  presence: {
-    id: "contamos-com-sua-presenca",
-    title: "Contamos com sua presença",
-    paragraphs: [
-      "Será uma alegria imensa ter você conosco nesse dia.",
-      "Sua presença tornará esse momento ainda mais especial, porque este convite não foi enviado por acaso. Ele chegou até você porque, de alguma forma, você faz parte da nossa história e queremos dividir essa alegria com você.",
-      "Esperamos você para celebrar conosco esse novo capítulo das nossas vidas.",
     ],
   },
   finalMessage: {
     id: "mensagem-final",
-    image: "/images/3.png",
+    title: "Com carinho",
+    image: "/images/3.webp",
     paragraphs: [
       "Não estamos preparando uma grande festa.",
       "Estamos preparando um momento verdadeiro.",

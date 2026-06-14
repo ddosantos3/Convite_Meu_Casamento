@@ -5,7 +5,13 @@ import { SectionShell } from "./SectionShell.jsx";
 
 export function MessageSection({ data }) {
   return (
-    <SectionShell id={data.id} title={data.title} narrow>
+    <SectionShell
+      id={data.id}
+      eyebrow={data.eyebrow}
+      title={data.title}
+      className="section-message"
+      narrow
+    >
       <Reveal>
         <GlassCard className="message-card">
           <Heart className="card-icon" size={22} aria-hidden="true" />
