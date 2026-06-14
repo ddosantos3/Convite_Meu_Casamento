@@ -1,8 +1,8 @@
 # Resumo Executivo
 
-O projeto contém a V4 conceitual do convite web de Douglas e Regiane, criada a partir de `prompt4.md` com o conceito "Uma memória em movimento".
+O projeto contém a identidade visual final do convite web de Douglas e Regiane, criada a partir da revisão ampliada de `prompt4.md` com o conceito "Uma memória em movimento".
 
-A experiência rompe a repetição de título, texto e card por meio de cenas fotográficas, datas monumentais, blocos editoriais assimétricos e uma colagem orgânica de fotos. Hero, fundos, reveals, timeline, cards e links usam motion sutil com respeito a `prefers-reduced-motion`.
+A experiência combina cenas fotográficas mais luminosas, bases em grafite e carvão, datas monumentais, blocos editoriais assimétricos, colagem orgânica de fotos, ornamentos de folhagem e partículas leves. Hero, fundos, reveals, timeline, cards e links usam motion sutil com respeito a `prefers-reduced-motion`.
 
 As três fotos são servidas em WebP com cerca de 100 KB cada. Os PNGs originais permanecem em `assets/source-images/` e podem ser reprocessados com `npm run optimize:images`.
 

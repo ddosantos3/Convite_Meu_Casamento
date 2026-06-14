@@ -1,6 +1,7 @@
 import { Heart } from "lucide-react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { InvitationOrnament } from "./InvitationOrnament.jsx";
 import { Reveal } from "./Reveal.jsx";
 
 export function MessageSection({ data }) {
@@ -32,6 +33,7 @@ export function MessageSection({ data }) {
         <Reveal className="message-scene-heading" direction="right">
           <span className="section-eyebrow">{data.eyebrow}</span>
           <h2>{data.title}</h2>
+          <InvitationOrnament />
         </Reveal>
         <div className="message-editorial-grid">
           <Reveal direction="right" delay={0.08}>

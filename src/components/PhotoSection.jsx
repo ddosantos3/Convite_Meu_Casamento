@@ -1,4 +1,5 @@
 import { PhotoCard } from "./PhotoCard.jsx";
+import { InvitationOrnament } from "./InvitationOrnament.jsx";
 import { Reveal } from "./Reveal.jsx";
 
 export function PhotoSection({ data }) {
@@ -8,6 +9,7 @@ export function PhotoSection({ data }) {
         <Reveal className="memories-heading" direction="right">
           <span className="section-eyebrow">{data.eyebrow}</span>
           <h2>{data.title}</h2>
+          <InvitationOrnament />
           <p>{data.intro}</p>
         </Reveal>
         <div className="photo-grid">

@@ -1,5 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 
+const particles = Array.from({ length: 9 }, (_, index) => index);
+
 export function AtmosphereLayer() {
   const shouldReduceMotion = useReducedMotion();
 
@@ -40,6 +42,30 @@ export function AtmosphereLayer() {
         animate={shouldReduceMotion ? undefined : { x: ["-12%", "14%", "-12%"], opacity: [0.1, 0.2, 0.1] }}
         transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
       />
+      <div className="ambient-particles">
+        {particles.map((particle) => (
+          <motion.span
+            className={`ambient-particle ambient-particle-${particle + 1}`}
+            key={particle}
+            animate={
+              shouldReduceMotion
+                ? undefined
+                : {
+                    x: [0, particle % 2 === 0 ? 12 : -10, 0],
+                    y: [0, -18 - particle * 2, 0],
+                    scale: [0.8, 1.15, 0.8],
+                    opacity: [0.08, 0.34, 0.08],
+                  }
+            }
+            transition={{
+              duration: 11 + particle * 1.4,
+              delay: particle * 0.55,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
     </div>
   );
 }

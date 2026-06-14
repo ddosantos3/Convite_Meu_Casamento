@@ -19,3 +19,7 @@
 - Usar composição editorial assimétrica na história, memórias e convite para evitar repetição de layout.
 - Estender `Reveal` com direção, distância e escala configuráveis sem alterar o comportamento padrão.
 - Manter os efeitos leves e baseados em transform/opacity para preservar fluidez no mobile.
+- Criar `InvitationOrnament` como decoração reutilizável com ícones Lucide e linhas CSS, sem adicionar imagens externas.
+- Usar somente partículas pequenas e esparsas para preservar desempenho e evitar poluição visual.
+- Equilibrar a base quente com grafite e carvão para aumentar luminosidade sem transformar o convite em uma paleta monocromática marrom.
+- Preservar os links reais do Google Maps apesar da instrução condicional de `href="#"` no prompt revisado, pois as URLs já foram fornecidas e aprovadas.

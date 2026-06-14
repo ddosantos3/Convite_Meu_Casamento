@@ -4,6 +4,7 @@
 
 - A validação automatizada cobre Chrome em mobile e desktop, mas não substitui a conferência final em aparelhos reais.
 - Parallax, blur e backdrop-filter podem variar em aparelhos móveis mais antigos; `prefers-reduced-motion` reduz as animações, mas a conferência física continua recomendada.
+- As partículas usam apenas nove elementos pequenos e transformações leves; ainda assim, aparelhos muito antigos podem reduzir a suavidade do movimento.
 - A URL pública final da Vercel ainda precisa ser confirmada.
 
 ## Segurança e privacidade

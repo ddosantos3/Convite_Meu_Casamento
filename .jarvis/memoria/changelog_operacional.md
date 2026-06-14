@@ -2,6 +2,15 @@
 
 ## 2026-06-14
 
+- Aplicada a revisão ampliada de `prompt4.md` como identidade visual final.
+- Clareadas as cenas fotográficas do Hero, mensagem, cerimônia e encerramento.
+- Adicionadas bases em grafite e carvão para reduzir a sensação de página escura repetitiva.
+- Criado ornamento reutilizável com folhagens, linhas finas e brilho champagne.
+- Adicionadas partículas ambientais leves com Framer Motion.
+- Refinados glassmorphism, glow seletivo, bordas e iluminação dos cards.
+- Adicionados ícones temáticos para amor, família, fé, localização e celebração.
+- Ampliados os testes Playwright para validar partículas e ornamentos.
+- Preservados textos, fotos reais otimizadas e links reais do Google Maps.
 - Incorporado `prompt4.md` como direção artística da V4.
 - Aplicado o conceito "Uma memória em movimento".
 - Transformadas mensagem especial e cerimônia em cenas fotográficas com parallax e sobreposição editorial.

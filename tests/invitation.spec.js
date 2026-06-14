@@ -29,6 +29,8 @@ test("renders the complete invitation without horizontal overflow", async ({ pag
   }
 
   await expect(page.getByRole("heading", { level: 2, name: "Com carinho" })).toBeVisible();
+  await expect(page.locator(".ambient-particle")).toHaveCount(9);
+  await expect(page.locator(".invitation-ornament")).toHaveCount(8);
 
   const locationLinks = page.getByRole("link", { name: /Ver localização de .* no Google Maps/ });
   await expect(locationLinks).toHaveCount(3);

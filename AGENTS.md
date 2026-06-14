@@ -6,7 +6,7 @@ Jarvis coordena qualquer demanda neste projeto, mantendo memória operacional e 
 
 ## Estado atual
 
-O projeto possui uma quarta versão conceitual do convite web de casamento de Douglas e Regiane, com cenas fotográficas, composição editorial assimétrica, fotos WebP, profundidade visual e motion suave.
+O projeto possui a identidade visual final do convite web de casamento de Douglas e Regiane, com cenas fotográficas mais luminosas, composição editorial assimétrica, ornamentos delicados, partículas sutis, fotos WebP e motion suave.
 
 ## Classificação da entrega
 

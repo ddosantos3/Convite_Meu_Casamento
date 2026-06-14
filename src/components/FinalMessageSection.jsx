@@ -1,4 +1,5 @@
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { InvitationOrnament } from "./InvitationOrnament.jsx";
 import { Reveal } from "./Reveal.jsx";
 
 export function FinalMessageSection({ data, couple }) {
@@ -22,6 +23,7 @@ export function FinalMessageSection({ data, couple }) {
         <div className="final-message">
           <span className="final-eyebrow">Um novo capítulo</span>
           <h2>{data.title}</h2>
+          <InvitationOrnament align="center" />
           {data.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}

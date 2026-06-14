@@ -1,4 +1,4 @@
-import { Calendar, ChevronDown } from "lucide-react";
+import { Calendar, ChevronDown, Leaf, Sparkles } from "lucide-react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 
 export function HeroSection({ data }) {
@@ -40,7 +40,9 @@ export function HeroSection({ data }) {
           animate={shouldReduceMotion ? undefined : { opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.06 }}
         >
-          D · R
+          <Leaf size={13} />
+          <span>D · R</span>
+          <Sparkles size={12} />
         </motion.span>
         <motion.div
           className="date-pill"

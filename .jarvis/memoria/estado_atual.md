@@ -2,11 +2,11 @@
 
 ## Situação
 
-Quarta versão conceitual do convite web de casamento de Douglas e Regiane implementada.
+Identidade visual final do convite web de casamento de Douglas e Regiane implementada.
 
 ## Demanda mais recente
 
-Usuário solicitou a aplicação integral de `prompt4.md`, preservando tudo que já funcionava, seguida de commit e atualização do repositório.
+Usuário ampliou `prompt4.md` e solicitou mais luminosidade, vida, decoração personalizada e identidade de convite, preservando o funcionamento existente.
 
 ## Classificação
 
@@ -18,9 +18,14 @@ Usuário solicitou a aplicação integral de `prompt4.md`, preservando tudo que 
 
 ## Estado técnico
 
-- `prompt4.md` incorporado ao projeto como referência da V4.
-- V4 usa Cormorant Garamond nos títulos e Manrope nos textos.
-- Background possui camadas atmosféricas vivas, grain, light leaks, escala e rotação lentas com Framer Motion.
+- `prompt4.md` atualizado e incorporado como referência da identidade visual final.
+- Cormorant Garamond permanece nos títulos e Manrope nos textos.
+- Background alterna grafite quente, carvão e pontos champagne/cobre.
+- Camadas atmosféricas usam grain, light leaks, partículas leves, escala e rotação lentas com Framer Motion.
+- Ornamentos reutilizáveis combinam linhas finas, folhagens e brilho discreto.
+- Fotos do Hero, mensagem, cerimônia e encerramento receberam tratamento mais luminoso.
+- Cards usam vidro em camadas, borda champagne e glow seletivo.
+- Ícones temáticos representam amor, família, fé, localização e celebração.
 - Mensagem especial e cerimônia funcionam como cenas fotográficas em tela cheia.
 - História usa data em grande escala, blocos editoriais e marcos assimétricos.
 - Fotos formam uma composição orgânica sobreposta no desktop e alternada no mobile.
@@ -36,7 +41,7 @@ Usuário solicitou a aplicação integral de `prompt4.md`, preservando tudo que 
 - `npm run optimize:images`: aprovado.
 - `npm run build`: aprovado.
 - `npm audit`: sem vulnerabilidades.
-- `npm run test:e2e`: 2 testes aprovados em mobile `390x844` e desktop `1440x1000`.
+- `npm run test:e2e`: 2 testes aprovados em mobile `390x844` e desktop `1440x1000`, incluindo ornamentos, partículas e mapas.
 - Revisão visual realizada por screenshots Playwright.
 
 ## Próximo passo recomendado

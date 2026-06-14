@@ -5,14 +5,14 @@
 - Nome: Convite Douglas & Regiane
 - Caminho: `/mnt/c/Users/Douglas Santos/Desktop/convite`
 - Data de inicialização Jarvis: 2026-06-14
-- Estado: quarta versão conceitual implementada
+- Estado: identidade visual final implementada
 
 ## Arquivos de contexto
 
 - `prompt.md`: briefing completo do convite.
 - `prompt2.md`: ajustes de evolução visual e emocional da V2.
 - `prompt3.md`: evolução conceitual, tipográfica, narrativa e de performance da V3.
-- `prompt4.md`: direção artística "Uma memória em movimento" e evolução editorial da V4.
+- `prompt4.md`: identidade visual final ampliada para "Uma memória em movimento".
 - `README.md`: instruções de uso, stack, estrutura e pendências.
 - `AGENTS.md`: regras locais de governança Jarvis.
 

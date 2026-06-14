@@ -1,6 +1,7 @@
 import { Church } from "lucide-react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { InvitationOrnament } from "./InvitationOrnament.jsx";
 import { Reveal } from "./Reveal.jsx";
 
 export function CeremonySection({ data }) {
@@ -32,6 +33,7 @@ export function CeremonySection({ data }) {
         <Reveal className="ceremony-scene-heading" direction="right">
           <span className="section-eyebrow">{data.eyebrow}</span>
           <h2>{data.title}</h2>
+          <InvitationOrnament />
         </Reveal>
         <Reveal className="ceremony-copy" direction="left" delay={0.16}>
           <span className="ceremony-icon">

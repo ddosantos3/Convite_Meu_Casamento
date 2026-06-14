@@ -18,6 +18,7 @@ Aplicação frontend estática com React e Vite, preparada para Vercel.
 │  ├─ data/weddingData.js
 │  ├─ components/
 │  │  ├─ AtmosphereLayer.jsx
+│  │  ├─ InvitationOrnament.jsx
 │  │  ├─ HeroSection.jsx
 │  │  ├─ MessageSection.jsx
 │  │  ├─ StorySection.jsx

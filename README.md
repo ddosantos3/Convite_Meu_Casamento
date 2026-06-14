@@ -1,8 +1,8 @@
 # Convite Douglas & Regiane
 
-Quarta versão conceitual do convite web de casamento para Douglas e Regiane.
+Versão conceitual final do convite web de casamento para Douglas e Regiane.
 
-O projeto foi criado para ser enviado por WhatsApp e aberto principalmente no celular. A experiência "Uma memória em movimento" combina cenas fotográficas, composição editorial assimétrica, dark afetivo, glassmorphism, glow champagne e movimento suave para contar a história do casal sem aparência de landing page convencional.
+O projeto foi criado para ser enviado por WhatsApp e aberto principalmente no celular. A experiência "Uma memória em movimento" combina cenas fotográficas, composição editorial assimétrica, bases em grafite e carvão, ornamentos de folhagem, partículas sutis, glassmorphism, glow champagne e movimento suave.
 
 ## Stack
 
@@ -80,6 +80,7 @@ src/
 │  ├─ LocationSection.jsx
 │  ├─ FinalMessageSection.jsx
 │  ├─ AtmosphereLayer.jsx
+│  ├─ InvitationOrnament.jsx
 │  ├─ GlassCard.jsx
 │  ├─ InvitationCard.jsx
 │  ├─ LocationCard.jsx

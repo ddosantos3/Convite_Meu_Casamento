@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
+import { InvitationOrnament } from "./InvitationOrnament.jsx";
 import { Reveal } from "./Reveal.jsx";
 import { SectionShell } from "./SectionShell.jsx";
 import { TimelineItem } from "./TimelineItem.jsx";
@@ -14,6 +15,7 @@ export function TimelineSection({ data }) {
       className="section-timeline"
       narrow
     >
+      <InvitationOrnament className="timeline-ornament" />
       <Reveal>
         <div className="timeline-wrap">
           <motion.span
