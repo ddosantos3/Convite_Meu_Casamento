@@ -3,6 +3,10 @@
 Convite web de casamento criado para compartilhamento por WhatsApp, com
 experiência mobile-first, cenas fotográficas e composição editorial.
 
+O motion premium inclui fades direcionais, entradas escalonadas, zoom
+cinematográfico, partículas e movimento sutil das fotos. As animações são
+ativadas por viewport e usam somente `transform` e `opacity`.
+
 ## Stack
 
 - React
@@ -70,6 +74,9 @@ Comparação local em viewport `390x844`:
 - Quadros acima de 34 ms: 30 para 0.
 - Percentil 95 dos frames: 33,4 ms para 16,7 ms.
 
+Após a retomada do motion premium, o perfil permaneceu em 16,7 ms no percentil
+95, sem quadros acima de 34 ms e com 345 KB transferidos.
+
 No mobile, o navegador seleciona fotos WebP de 900 px, entre 57 e 67 KB.
 No desktop, pode selecionar as variantes de 1200 px.
 
@@ -79,7 +86,8 @@ Executado em 2026-06-14:
 
 - Build Vite aprovado.
 - `npm audit`: zero vulnerabilidades.
-- Playwright: dois testes aprovados em `390x844` e `1440x1000`.
+- Playwright: quatro testes aprovados em `390x844` e `1440x1000`, incluindo
+  validação de ativação das animações por viewport.
 - Revisão visual por screenshots completas.
 
 ## Publicação

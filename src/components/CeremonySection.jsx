@@ -1,10 +1,17 @@
 import { Church } from "lucide-react";
+import { useViewportMotion } from "../hooks/useViewportMotion.js";
 import { InvitationOrnament } from "./InvitationOrnament.jsx";
 import { Reveal } from "./Reveal.jsx";
 
 export function CeremonySection({ data }) {
+  const sectionRef = useViewportMotion();
+
   return (
-    <section id={data.id} className="ceremony-scene">
+    <section
+      ref={sectionRef}
+      id={data.id}
+      className="ceremony-scene motion-scene"
+    >
       <img
         className="ceremony-scene-photo"
         src={data.image.src}

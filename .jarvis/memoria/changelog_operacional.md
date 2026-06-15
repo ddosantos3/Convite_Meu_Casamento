@@ -2,6 +2,15 @@
 
 ## 2026-06-14
 
+- Restaurado motion premium sem reintroduzir Framer Motion.
+- Adicionado controlador de animação por viewport em `useViewportMotion`.
+- Restaurados zoom cinematográfico, fades direcionais, stagger, partículas e
+  movimento sutil das fotos.
+- Animações de cena são pausadas automaticamente fora da viewport.
+- Adicionadas entradas individuais para galeria e itens da timeline.
+- Adicionado teste Playwright para validar motion ativo no mobile e desktop.
+- Perfil com animações restauradas manteve p95 de 16,7 ms e zero quadros lentos.
+- Playwright ampliado para quatro testes aprovados.
 - Investigada lentidão de carregamento e navegação com perfil mobile reproduzível.
 - Removidos Framer Motion, parallax por scroll e animações contínuas do runtime.
 - Substituídos reveals por IntersectionObserver e transições CSS.

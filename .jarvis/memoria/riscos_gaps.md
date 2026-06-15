@@ -7,6 +7,8 @@
 - O cache de `/images/*` dura um dia; clientes recorrentes podem manter uma foto
   anterior nesse período após uma troca.
 - Chrome automatizado não substitui a conferência em aparelhos físicos antigos.
+- O motion usa recursos leves e pausáveis, mas ainda deve ser conferido em
+  aparelhos Android de entrada e Safari iOS.
 
 ## Segurança e privacidade
 

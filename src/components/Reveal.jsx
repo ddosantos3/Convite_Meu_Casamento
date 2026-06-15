@@ -7,6 +7,7 @@ export function Reveal({
   direction = "up",
   distance = 28,
   scale = 1,
+  as: Component = "div",
 }) {
   const elementRef = useRef(null);
   const offset = {
@@ -32,17 +33,26 @@ export function Reveal({
       ([entry]) => {
         if (!entry.isIntersecting) return;
         element.classList.add("is-visible");
+        const settleTimer = window.setTimeout(
+          () => element.classList.add("is-settled"),
+          1050 + delay * 1000,
+        );
         observer.disconnect();
+        element.dataset.settleTimer = String(settleTimer);
       },
       { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
     );
 
     observer.observe(element);
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      observer.disconnect();
+      const settleTimer = Number(element.dataset.settleTimer);
+      if (settleTimer) window.clearTimeout(settleTimer);
+    };
+  }, [delay]);
 
   return (
-    <div
+    <Component
       className={`reveal ${className}`}
       ref={elementRef}
       style={{
@@ -53,6 +63,6 @@ export function Reveal({
       }}
     >
       {children}
-    </div>
+    </Component>
   );
 }

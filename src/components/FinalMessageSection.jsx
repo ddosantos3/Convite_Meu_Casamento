@@ -1,9 +1,16 @@
+import { useViewportMotion } from "../hooks/useViewportMotion.js";
 import { InvitationOrnament } from "./InvitationOrnament.jsx";
 import { Reveal } from "./Reveal.jsx";
 
 export function FinalMessageSection({ data, couple }) {
+  const sectionRef = useViewportMotion();
+
   return (
-    <section id={data.id} className="final-section">
+    <section
+      ref={sectionRef}
+      id={data.id}
+      className="final-section motion-scene"
+    >
       <img
         className="final-photo"
         src={data.image.src}

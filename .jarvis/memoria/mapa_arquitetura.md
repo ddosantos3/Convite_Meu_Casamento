@@ -17,6 +17,7 @@ Aplicação frontend estática com React e Vite, preparada para Vercel.
 │  └─ invitation.spec.js
 ├─ src/
 │  ├─ data/weddingData.js
+│  ├─ hooks/useViewportMotion.js
 │  ├─ components/
 │  │  ├─ AtmosphereLayer.jsx
 │  │  ├─ InvitationOrnament.jsx

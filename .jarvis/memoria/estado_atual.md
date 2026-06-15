@@ -2,12 +2,12 @@
 
 ## Situação
 
-Convite web otimizado para carregamento e navegação mobile.
+Convite web com motion premium restaurado e desempenho mobile preservado.
 
 ## Demanda mais recente
 
-Usuário relatou lentidão e pediu revisão das configurações da Vercel e dos
-ajustes possíveis via código.
+Usuário aprovou o ganho de desempenho, mas solicitou a volta das animações,
+fades e fluidez com padrão visual premium.
 
 ## Classificação
 
@@ -21,8 +21,11 @@ ajustes possíveis via código.
 - React, Vite, TailwindCSS e Lucide Icons mantidos.
 - Framer Motion removido do runtime.
 - Reveals usam IntersectionObserver e CSS.
-- Parallax por scroll e animações contínuas foram removidos.
-- Atmosfera é estática e não usa mais camadas fixas no scroll.
+- Reveals usam fades direcionais, escala sutil e stagger.
+- Hero, mensagem, cerimônia e encerramento usam zoom cinematográfico pausável.
+- Cada cena anima apenas enquanto está próxima da viewport.
+- Galeria e timeline possuem entradas individuais escalonadas.
+- Partículas usam apenas transform e opacity, sem camada fixa.
 - `backdrop-filter` e halos animados são desativados no mobile.
 - Grain SVG foi substituído por WebP de aproximadamente 2,5 KB.
 - Fotos usam `srcset` com WebP de 900 px no mobile e 1200 px no desktop.
@@ -38,15 +41,17 @@ ajustes possíveis via código.
 - Recálculo de estilo: 1.219 ms para 66 ms.
 - Quadros acima de 34 ms: 30 para 0.
 - Percentil 95 dos frames: 33,4 ms para 16,7 ms.
+- Perfil com motion restaurado: 345 KB, p95 de 16,7 ms e zero quadros acima de
+  34 ms.
 
 ## Validação
 
 - `npm run optimize:images`: aprovado.
 - `npm run build`: aprovado.
 - `npm audit`: zero vulnerabilidades.
-- `npm run test:e2e`: dois testes aprovados.
+- `npm run test:e2e`: quatro testes aprovados, incluindo motion por viewport.
 - Screenshots mobile e desktop revisadas.
 
 ## Próximo passo
 
-Publicar na Vercel, medir a URL pública e conferir headers/cache em celular real.
+Publicar no GitHub/Vercel, medir a URL pública e conferir o motion em celular real.

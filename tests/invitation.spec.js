@@ -109,3 +109,32 @@ test("renders the complete invitation without horizontal overflow", async ({ pag
     animations: "disabled",
   });
 });
+
+test("activates premium motion only near the viewport", async ({ page }) => {
+  await page.goto("/");
+
+  const hero = page.locator(".hero-section");
+  await expect(hero).toHaveClass(/is-motion-active/);
+
+  const heroAnimation = await page.locator(".hero-photo").evaluate(
+    (element) => getComputedStyle(element).animationName,
+  );
+  expect(heroAnimation).toContain("heroCinema");
+
+  const messageHeading = page.locator(".message-scene-heading");
+  await page.locator("#para-alguem-especial").scrollIntoViewIfNeeded();
+  await expect(messageHeading).toHaveClass(/is-visible/);
+
+  const firstPhoto = page.locator(".photo-card").first();
+  await firstPhoto.scrollIntoViewIfNeeded();
+  await expect(firstPhoto).toHaveClass(/is-visible/);
+
+  const photoAnimation = await firstPhoto.locator("img").evaluate(
+    (element) => getComputedStyle(element).animationName,
+  );
+  expect(photoAnimation).toContain("photoBreath");
+
+  const finalSection = page.locator("#mensagem-final");
+  await finalSection.scrollIntoViewIfNeeded();
+  await expect(finalSection).toHaveClass(/is-motion-active/);
+});

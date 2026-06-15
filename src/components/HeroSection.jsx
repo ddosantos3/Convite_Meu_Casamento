@@ -1,8 +1,15 @@
 import { Calendar, ChevronDown, Leaf, Sparkles } from "lucide-react";
+import { useViewportMotion } from "../hooks/useViewportMotion.js";
 
 export function HeroSection({ data }) {
+  const sectionRef = useViewportMotion({ rootMargin: "10% 0px" });
+
   return (
-    <section className="hero-section" aria-label="Abertura do convite">
+    <section
+      ref={sectionRef}
+      className="hero-section motion-scene"
+      aria-label="Abertura do convite"
+    >
       <img
         className="hero-photo"
         src={data.hero.image.src}

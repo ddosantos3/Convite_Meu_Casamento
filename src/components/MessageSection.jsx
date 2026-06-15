@@ -1,10 +1,17 @@
 import { Heart } from "lucide-react";
+import { useViewportMotion } from "../hooks/useViewportMotion.js";
 import { InvitationOrnament } from "./InvitationOrnament.jsx";
 import { Reveal } from "./Reveal.jsx";
 
 export function MessageSection({ data }) {
+  const sectionRef = useViewportMotion();
+
   return (
-    <section id={data.id} className="memory-scene section-message">
+    <section
+      ref={sectionRef}
+      id={data.id}
+      className="memory-scene section-message motion-scene"
+    >
       <img
         className="message-scene-photo"
         src={data.image.src}
